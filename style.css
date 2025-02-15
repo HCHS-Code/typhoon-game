@@ -1,17 +1,23 @@
 body {
+  font-family: sans-serif;
   background-color: #f0f0f0;
 }
 
 .game-container {
-  font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 70vh;
   margin: 0;
 }
+
 .container {
   text-align: center;
+}
+
+.helpContainer {
+  text-align: center;
+  font-size: 24px;
 }
 
 .game-board {
