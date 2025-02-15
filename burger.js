@@ -6,10 +6,6 @@ var hamburgerImage = document.getElementById("hamburger-img");
 var enabled = false;
 mobileNavs.style.display = 'none';
 
-hamburger.addEventListener("change", function(event){
-
-});
-
 hamburger.addEventListener("click", function(event){
   if (enabled == false) {
     enabled = true;
