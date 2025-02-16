@@ -5,8 +5,8 @@
 }
 
 #hamburger {
-    background-color: black;
-    border-color: rgb(41, 41, 41);
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
     height: 55px;
     width: 55px;
 
@@ -14,15 +14,16 @@
 }
 
 #hamburger:hover {
-    background-color: rgb(90, 90, 90);
+    background-color: rgb(206, 206, 206);
     border-color: rgb(41, 41, 41);
     height: 55px;
     width: 55px;
-    transform: scale(1.1);
+
+    transform: scale(1.2);
 }
 
 #hamburger:active {
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(218, 218, 218);
     border-color: rgb(255, 255, 255);
     height: 55px;
     width: 55px;
@@ -32,6 +33,7 @@
 #hamburger-img {
     height: 40px;
     width: 40px;
+    filter: brightness(0);
 }
 
 #toLeft {
