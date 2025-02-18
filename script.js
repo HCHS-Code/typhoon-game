@@ -1,3 +1,5 @@
+var cols;
+var rows;
 document.addEventListener("DOMContentLoaded", () => {
   //Game Board 0
   const boardData0 = [
@@ -59,9 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function createBoard() {
     gameBoard.innerHTML = "";
+    gameBoard.style.gridTemplateColumns = 'repeat(${cols}, 80px)';
 
-    for (let row = 0; row < 5; row++) {
-      for (let col = 0; col < 5; col++) {
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
         cell.dataset.row = row;
@@ -104,6 +107,30 @@ document.addEventListener("DOMContentLoaded", () => {
         boardData = boardData1; // Default to board1 if something goes wrong
     }
   }
+
+  function updateBoardSize(selectedBoardSize) {
+    switch (selectedBoardSize) {
+      case "boardData1":
+        boardData = boardData1;
+        break;
+        case "boardSize7x7":
+          boardSize = boardSize7x7;
+          cols = 7;
+          rows = 7;
+          break;
+          case "boardSize9x9":
+          boardSize = boardSize9x9;
+          cols = 9;
+          rows = 9;
+          break;
+          case "boardSize11x11":
+          boardSize = boardSize11x11;
+          cols = 11;
+          rows = 11;
+          break;
+    }
+  }
+ 
 
   boardSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
