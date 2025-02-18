@@ -43,6 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
     ["?", "Bomb", "Typhoon", "Poison", "?"],
   ];
 
+  const boardSize7x7 = [
+    ["?","?","?","?","Bomb","?","Red Cross"],
+    ["?","Poison","?","?","?","Bomb","?"],
+    ["?","Bomb","?","Typhoon","?","?","?"],
+    ["?","?","?","?","?","?","?"],
+    ["?","Poison","?","?","?","?","?"],
+    ["?","?","Typhoon","?","Bomb","?","?"],
+    ["Bomb","?","?","?","?","?","Poison"],
+  ];
+
   let boardData = boardData0;
   const gameBoard = document.getElementById("gameBoard");
   const boardSelect = document.getElementById("boardSelect");
