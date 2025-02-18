@@ -47,7 +47,7 @@ function addTeam() {
   input.id = 'team' + teamSize + 'PlayerName'
   input.placeholder = 'Player Name'
 
-  button.onclick = "addPlayer('team' + teamSize)"
+  button.setAttribute('onclick', "addPlayer('team" + teamSize.toString() + "');");
   button.textContent = "Add Player"
 
 
