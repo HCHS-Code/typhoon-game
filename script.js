@@ -49,10 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function createBoard() {
     gameBoard.innerHTML = "";
+    const numbers = ["1","2","3","4","5"];
+    const letters = ["A","B","C","D","E"];
 
-    for (let row = 0; row < 5; row++) {
+    for (let row = -1; row < 5; row++) {
       for (let col = 0; col < 5; col++) {
         const cell = document.createElement("div");
+        if(row===-1){
+          cell.classList.add("label");
+          cell.textContent = numbers[col]
+        }
         cell.classList.add("cell");
         cell.dataset.row = row;
         cell.dataset.col = col;

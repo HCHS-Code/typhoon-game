@@ -47,3 +47,9 @@ body {
 .revealed {
   background-color: #fff;
 }
+
+.label {
+  color: black;
+  background-color: dimgray;
+  font-weight: 600;
+}
