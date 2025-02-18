@@ -35,7 +35,25 @@ body {
 .cell:hover {
   background-color: #eee;
 }
-
+@keyframes bomb {
+  0% {
+    background-color: #ef4b4b;
+  }
+  50% {
+    background-color: rgb(247, 173, 13);
+  }
+  100% {
+    background-color: #ebcf51;
+  }
+}
 .revealed {
-  background-color: #fff;
+  background-color: #f9f9f9;
+}
+
+.revealed #bomb{
+  animation-name: bomb;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
