@@ -6,10 +6,12 @@
     margin: 0px;
   }
   
-  #teams {
-    margin: auto;
-    width: 30%;
-  }
+    #teams {
+        position: absolute;
+        margin: auto;
+        width: 33%;
+        right: 0;
+    }
   
   #add-team {
     margin: auto;
@@ -19,6 +21,7 @@
   }
   
   #teams div {
+    display: flex;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;

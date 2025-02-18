@@ -57,6 +57,24 @@ function addPlayer(team) {
     }
 }
 
+function updatePoints(team, updateAmount) {
+  const pointNameID = team + `points`;
+  const pointText = document.getElementById(pointNameID);
+  
+  if (!teams[team]){
+    teams[team] = []
+  }
+
+  if (!teams[team]['points']) {
+    teams[team]['points'] = 0
+  }
+
+  teams[team]['points'] += updateAmount
+  console.log(teams[team]['points'])
+
+  pointText.textContent = teams[team]['points']
+}
+
 function addTeam() {
   // Add one to properly make team name
   const teamSize = teams.length + 2;
@@ -67,10 +85,19 @@ function addTeam() {
 
   // create children
   const div = document.createElement('div');
+  const playerInfo = document.createElement('div');
   const h3 = document.createElement('h3');
   const ul = document.createElement('ul');
   const input = document.createElement('input');
   const button = document.createElement('button');
+
+  const pointInfo = document.createElement('div');
+  const pointText = document.createElement('h2');
+  const pointValue = document.createElement('h2');
+
+  pointText.textContent = 'Points:'
+  pointValue.textContent = '0'
+  pointValue.id = 'team'+teamSize+'points'
 
   // adjust children style
   div.id = 'team' + teamSize;
@@ -86,8 +113,12 @@ function addTeam() {
 
   // append children
   rosters.appendChild(div);
-  div.appendChild(h3);
-  div.appendChild(ul);
-  div.appendChild(input);
-  div.appendChild(button);
+  div.appendChild(playerInfo);
+  div.appendChild(pointInfo);
+  playerInfo.appendChild(h3);
+  playerInfo.appendChild(ul);
+  playerInfo.appendChild(input);
+  playerInfo.appendChild(button);
+  pointInfo.appendChild(pointText)
+  pointInfo.appendChild(pointValue)
 }

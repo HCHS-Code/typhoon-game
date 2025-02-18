@@ -47,20 +47,26 @@
           <!-- Game board cells will be generated here -->
         </div>
       </div>
+  
+      <div id="teams">
+        <div id="team1">
+          <div>
+            <h3>Team 1</h3>
+            <ul id="team1Players"></ul>
+            <input type="text" id="team1PlayerName" placeholder="Player Name">
+            <button onclick="addPlayer('team1')">Add Player</button>
+          </div>
+          <div>
+            <h2>Points:</h2>
+            <h2 id="team1points">0</h2>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="add-team">
       <button onclick="addTeam()">Add Team</button>
       <button onclick="removeTeam()">Remove Team</button>
-    </div>
-
-    <div id="teams">
-      <div id="team1">
-        <h3>Team 1</h3>
-        <ul id="team1Players"></ul>
-        <input type="text" id="team1PlayerName" placeholder="Player Name">
-        <button onclick="addPlayer('team1')">Add Player</button>
-      </div>
     </div>
 
     <!-- Load Scripts -->
