@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const value = boardData[row][col];
 
     cell.textContent = value;
+    cell.id = value;
     cell.classList.add("revealed");
     cell.removeEventListener("click", handleCellClick); // Prevent re-clicking
 

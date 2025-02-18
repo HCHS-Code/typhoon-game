@@ -14,12 +14,15 @@ function removePlayer(team, playerName) {
   }
 }
 
-function removeTeam(team) {
-  let teamDiv = document.getElementById(team);
-  teamDiv.remove();
-
-  const foundElement = teams.indexOf(team);
-  teams.splice(foundElement, 1);
+function removeTeam() {
+  const varLength = teams.length + 1
+  if (varLength > 1) {
+    const teamToRemove = document.getElementById("team" + varLength)
+    const foundElement = teams.indexOf('team'+varLength)
+  
+    teamToRemove.remove()
+    teams.splice(foundElement, 1)
+  }
 }
 
 function addPlayer(team) {
@@ -80,13 +83,6 @@ function addTeam() {
 
   button.setAttribute('onclick', "addPlayer('team" + teamSize.toString() + "');");
   button.textContent = "Add Player";
-
-  const remove = document.createElement('button');
-  remove.textContent = 'X';
-  remove.id = 'removeButton';
-  remove.setAttribute('onclick', "removeTeam('team" + teamSize.toString() + "');");
-
-  h3.appendChild(remove);
 
   // append children
   rosters.appendChild(div);

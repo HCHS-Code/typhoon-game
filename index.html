@@ -6,7 +6,9 @@
     <title>Bomb/Typhoon Review Game</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="assets/css/hamburgerMenu/hamburger.css" />
-    <link rel="stylesheet" href="assets/css/hamburgerMenu/_hamburger.css" />
+    <link rel="stylesheet" href="assets/css/hamburgerMenu/roster.css" />
+    <link rel="stylesheet" href="assets/css/hamburgerMenu/visualeffects.css" />
+
   </head>
 
   <body>
@@ -47,6 +49,11 @@
       </div>
     </div>
 
+    <div id="add-team">
+      <button onclick="addTeam()">Add Team</button>
+      <button onclick="removeTeam()">Remove Team</button>
+    </div>
+
     <div id="teams">
       <div id="team1">
         <h3>Team 1</h3>
@@ -56,14 +63,10 @@
       </div>
     </div>
 
-    <div id="add-team">
-      <button onclick="addTeam()">Add Team</button>
-    </div>
-
     <!-- Load Scripts -->
 
     <script src="script.js"></script>
     <script src="burger.js"></script>
-    <script src="framework.js"></script>
+    <script src="rosterFramework.js"></script>
   </body>
 </html>
