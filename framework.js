@@ -1,5 +1,27 @@
 let teams = [];
 
+function removePlayer(team, playerName) {
+  const validTeam = teams[team];
+  const player = document.getElementById(playerName);
+
+  if (validTeam && player) {
+    player.remove();
+
+    const foundElement = teams[team].indexOf(playerName);
+    teams[team].splice(foundElement, 1);
+
+    console.log(teams[team])
+  }
+}
+
+function removeTeam(team) {
+  let teamDiv = document.getElementById(team);
+  teamDiv.remove();
+
+  const foundElement = teams.indexOf(team);
+  teams.splice(foundElement, 1);
+}
+
 function addPlayer(team) {
     const playerNameInputId = team + `PlayerName`;
     const playerName = document.getElementById(playerNameInputId).value;
@@ -8,9 +30,18 @@ function addPlayer(team) {
       const playerListId = team + `Players`;
       const playerList = document.getElementById(playerListId);
       const listItem = document.createElement('li');
+
+      const remove = document.createElement('button');
+      remove.textContent = 'X';
+      remove.id = 'removeButton';
+
+      remove.setAttribute('onclick', "removePlayer('" + team + "','" + playerName + "')");
       
       listItem.textContent = playerName;
+      listItem.id = playerName;
       playerList.appendChild(listItem);
+
+      listItem.appendChild(remove);
 
       document.getElementById(playerNameInputId).value = ''; // Clear input
 
@@ -19,49 +50,48 @@ function addPlayer(team) {
       }
   
       teams[team].push(playerName);
-      console.log(teams[team])
+      console.log(teams[team]);
     }
 }
 
 function addTeam() {
   // Add one to properly make team name
-  const teamSize = teams.length + 2
-  console.log(teamSize)
-  teams.push('team' + teamSize)
+  const teamSize = teams.length + 2;
+  console.log(teamSize);
+  teams.push('team' + teamSize);
 
   const rosters = document.getElementById("teams");
 
   // create children
   const div = document.createElement('div');
-  const h3 = document.createElement('h3')
-  const ul = document.createElement('ul')
-  const input = document.createElement('input')
-  const button = document.createElement('button')
+  const h3 = document.createElement('h3');
+  const ul = document.createElement('ul');
+  const input = document.createElement('input');
+  const button = document.createElement('button');
 
   // adjust children style
-  div.id = 'team-roster'
-  h3.textContent = 'Team' + teamSize.toString()
-  ul.id = 'team' + teamSize + 'Players'
+  div.id = 'team' + teamSize;
+  h3.textContent = 'Team ' + teamSize.toString();
+  ul.id = 'team' + teamSize + 'Players';
 
-  input.type = 'text'
-  input.id = 'team' + teamSize + 'PlayerName'
-  input.placeholder = 'Player Name'
+  input.type = 'text';
+  input.id = 'team' + teamSize + 'PlayerName';
+  input.placeholder = 'Player Name';
 
   button.setAttribute('onclick', "addPlayer('team" + teamSize.toString() + "');");
-  button.textContent = "Add Player"
+  button.textContent = "Add Player";
 
+  const remove = document.createElement('button');
+  remove.textContent = 'X';
+  remove.id = 'removeButton';
+  remove.setAttribute('onclick', "removeTeam('team" + teamSize.toString() + "');");
+
+  h3.appendChild(remove);
 
   // append children
-  rosters.appendChild(div)
-  div.appendChild(h3)
-  div.appendChild(ul)
-  div.appendChild(input)
-  div.appendChild(button)
+  rosters.appendChild(div);
+  div.appendChild(h3);
+  div.appendChild(ul);
+  div.appendChild(input);
+  div.appendChild(button);
 }
-
-// <div class="team-roster">
-// <h3>Team 1</h3>
-// <ul id="team1Players"></ul>
-// <input type="text" id="team1PlayerName" placeholder="Player Name">
-// <button onclick="addPlayer('team1')">Add Player</button>
-// </div>

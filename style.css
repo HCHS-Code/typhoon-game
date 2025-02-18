@@ -49,6 +49,11 @@ body {
 }
 
 /* Roster CSS (may move to seperate .css) */
+#removeButton {
+  color: red;
+  background-color: #ffffff00;
+}
+
 #teams {
   margin: auto;
   width: 30%;
@@ -61,7 +66,7 @@ body {
   width: 28%;
 }
 
-#team-roster {
+#teams div {
   border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
