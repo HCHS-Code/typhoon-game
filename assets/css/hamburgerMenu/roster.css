@@ -31,11 +31,18 @@
     border: 1px solid #ccc;
     padding: 7px;
     margin: 10px;
+    height: 20px;
     width: 30%;
   }
   
   #teams button {
     border: 1px solid #ccc;
-    padding: 6px;
-    margin: 3px;
+    padding: 7px;
+    margin: 10px;
+    height: 30px;
+    width: 30%;
+  }
+
+  #teams h4 {
+    width: 100%;;
   }

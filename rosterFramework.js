@@ -1,4 +1,5 @@
 let teams = [];
+const maxTeams = 4;
 
 function removePlayer(team, playerName) {
   const validTeam = teams[team];
@@ -32,7 +33,7 @@ function addPlayer(team) {
     if (playerName) {
       const playerListId = team + `Players`;
       const playerList = document.getElementById(playerListId);
-      const listItem = document.createElement('li');
+      const listItem = document.createElement('p');
 
       const remove = document.createElement('button');
       remove.textContent = 'X';
@@ -78,47 +79,49 @@ function updatePoints(team, updateAmount) {
 function addTeam() {
   // Add one to properly make team name
   const teamSize = teams.length + 2;
-  console.log(teamSize);
-  teams.push('team' + teamSize);
-
-  const rosters = document.getElementById("teams");
-
-  // create children
-  const div = document.createElement('div');
-  const playerInfo = document.createElement('div');
-  const h3 = document.createElement('h3');
-  const ul = document.createElement('ul');
-  const input = document.createElement('input');
-  const button = document.createElement('button');
-
-  const pointInfo = document.createElement('div');
-  const pointText = document.createElement('h2');
-  const pointValue = document.createElement('h2');
-
-  pointText.textContent = 'Points:'
-  pointValue.textContent = '0'
-  pointValue.id = 'team'+teamSize+'points'
-
-  // adjust children style
-  div.id = 'team' + teamSize;
-  h3.textContent = 'Team ' + teamSize.toString();
-  ul.id = 'team' + teamSize + 'Players';
-
-  input.type = 'text';
-  input.id = 'team' + teamSize + 'PlayerName';
-  input.placeholder = 'Player Name';
-
-  button.setAttribute('onclick', "addPlayer('team" + teamSize.toString() + "');");
-  button.textContent = "Add Player";
-
-  // append children
-  rosters.appendChild(div);
-  div.appendChild(playerInfo);
-  div.appendChild(pointInfo);
-  playerInfo.appendChild(h3);
-  playerInfo.appendChild(ul);
-  playerInfo.appendChild(input);
-  playerInfo.appendChild(button);
-  pointInfo.appendChild(pointText)
-  pointInfo.appendChild(pointValue)
+  if (teamSize < maxTeams+1) {
+    console.log(teamSize);
+    teams.push('team' + teamSize);
+  
+    const rosters = document.getElementById("teams");
+  
+    // create children
+    const div = document.createElement('div');
+    const playerInfo = document.createElement('div');
+    const h3 = document.createElement('h3');
+    const ul = document.createElement('ul');
+    const input = document.createElement('input');
+    const button = document.createElement('button');
+  
+    const pointInfo = document.createElement('div');
+    const pointText = document.createElement('h2');
+    const pointValue = document.createElement('h2');
+  
+    pointText.textContent = 'Points:'
+    pointValue.textContent = '0'
+    pointValue.id = 'team'+teamSize+'points'
+  
+    // adjust children style
+    div.id = 'team' + teamSize;
+    h3.textContent = 'Team ' + teamSize.toString();
+    ul.id = 'team' + teamSize + 'Players';
+  
+    input.type = 'text';
+    input.id = 'team' + teamSize + 'PlayerName';
+    input.placeholder = 'Player Name';
+  
+    button.setAttribute('onclick', "addPlayer('team" + teamSize.toString() + "');");
+    button.textContent = "Add Player";
+  
+    // append children
+    rosters.appendChild(div);
+    div.appendChild(playerInfo);
+    div.appendChild(pointInfo);
+    playerInfo.appendChild(h3);
+    playerInfo.appendChild(ul);
+    playerInfo.appendChild(input);
+    playerInfo.appendChild(button);
+    pointInfo.appendChild(pointText)
+    pointInfo.appendChild(pointValue)
+  }
 }
