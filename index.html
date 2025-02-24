@@ -6,7 +6,7 @@
     <title>Bomb/Typhoon Review Game</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="assets/css/hamburgerMenu/hamburger.css" />
-    <link rel="stylesheet" href="assets/css/hamburgerMenu/_hamburger.css" />
+    <link rel="stylesheet" href="assets/css/hamburgerMenu/roster.css" />
   </head>
 
   <body>
@@ -45,8 +45,32 @@
           <!-- Game board cells will be generated here -->
         </div>
       </div>
+  
+      <div id="teams">
+        <div id="team1">
+          <div>
+            <h3>Team 1</h3>
+            <input type="text" id="team1PlayerName" placeholder="Player Name">
+            <button onclick="addPlayer('team1')">Add Player</button>
+            <h4 id="team1Players"></h4>
+          </div>
+          <div>
+            <h2>Points:</h2>
+            <h2 id="team1points">0</h2>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div id="add-team">
+      <button onclick="addTeam()">Add Team</button>
+      <button onclick="removeTeam()">Remove Team</button>
+    </div>
+
+    <!-- Load Scripts -->
+
     <script src="script.js"></script>
     <script src="burger.js"></script>
+    <script src="rosterFramework.js"></script>
   </body>
 </html>

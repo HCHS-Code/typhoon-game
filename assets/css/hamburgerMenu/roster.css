@@ -1,0 +1,48 @@
+#removeButton {
+    color: red;
+    background-color: #ffffff00;
+    border: 1px solid #ccc;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+    #teams {
+        position: absolute;
+        margin: auto;
+        width: 33%;
+        right: 0;
+    }
+  
+  #add-team {
+    margin: auto;
+    justify-self: center;
+    justify-content: center;
+    width: 28%;
+  }
+  
+  #teams div {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  #teams input {
+    border: 1px solid #ccc;
+    padding: 7px;
+    margin: 10px;
+    height: 20px;
+    width: 30%;
+  }
+  
+  #teams button {
+    border: 1px solid #ccc;
+    padding: 7px;
+    margin: 10px;
+    height: 30px;
+    width: 30%;
+  }
+
+  #teams h4 {
+    width: 100%;;
+  }
