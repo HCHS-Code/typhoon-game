@@ -60,24 +60,6 @@ function addPlayer(team) {
     }
 }
 
-function updatePoints(team, updateAmount) {
-  const pointNameID = team + `points`;
-  const pointText = document.getElementById(pointNameID);
-  
-  if (!teams[team]){
-    teams[team] = []
-  }
-
-  if (!teams[team]['points']) {
-    teams[team]['points'] = 0
-  }
-
-  teams[team]['points'] += updateAmount
-  console.log(teams[team]['points'])
-
-  pointText.textContent = teams[team]['points']
-}
-
 function addTeam() {
   // Add one to properly make team name
   const teamSize = teams.length + 2;
@@ -126,4 +108,23 @@ function addTeam() {
     pointInfo.appendChild(pointText)
     pointInfo.appendChild(pointValue)
   }
+}
+
+
+function updatePoints(team, updateAmount) {
+  const pointNameID = team + `points`;
+  const pointText = document.getElementById(pointNameID);
+  
+  if (!teams[team]){
+    teams[team] = []
+  }
+
+  if (!teams[team]['points']) {
+    teams[team]['points'] = 0
+  }
+
+  teams[team]['points'] += updateAmount
+  console.log(teams[team]['points'])
+
+  pointText.textContent = teams[team]['points']
 }
