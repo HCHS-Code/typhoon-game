@@ -23,6 +23,8 @@ function removeTeam() {
   
     teamToRemove.remove()
     teams.splice(foundElement, 1)
+  } else {
+    console.log('Max team count')
   }
 }
 
