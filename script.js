@@ -53,11 +53,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const letters = ["A","B","C","D","E"];
 
     for (let row = -1; row < 5; row++) {
-      for (let col = 0; col < 5; col++) {
+      for (let col = -1; col < 5; col++) {
         const cell = document.createElement("div");
         if(row===-1){
           cell.classList.add("label");
           cell.textContent = numbers[col]
+         //Need to prevent clicking
+        }
+        if(col===-1){
+        cell.classList.add("label");
+        cell.textContent = letters[row]
+        // Need to prevent clicking
         }
         cell.classList.add("cell");
         cell.dataset.row = row;
@@ -66,6 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
         gameBoard.appendChild(cell);
       }
     }
+
+
   }
 
   function handleCellClick(event) {
