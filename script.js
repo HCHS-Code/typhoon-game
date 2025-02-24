@@ -1,5 +1,5 @@
-var cols;
-var rows;
+let cols;
+let rows;
 document.addEventListener("DOMContentLoaded", () => {
   //Game Board 0
   const boardData0 = [
@@ -54,6 +54,31 @@ document.addEventListener("DOMContentLoaded", () => {
     ["?","?","Typhoon","?","Bomb","?","?"],
     ["Bomb","?","?","?","?","?","Poison"],
   ];
+  //const boardSize9x9 = [
+  //  ["?","?","?","?","Bomb","?","Red Cross","?","?"],
+  //  ["?","Poison","?","?","?","Bomb","?","?","?"],
+  //  ["?","Bomb","?","Bomb","?","?","?","?","?"],
+  //  ["?","?","?","?","?","?","?","?","?"],
+  //  ["?","Poison","?","Poison","?","?","?","?","?"],
+  //  ["?","?","Typhoon","?","Bomb","?","?","?","?"],
+  //  ["Bomb","?","?","?","?","?","?","Typhoon","?"],
+  //  ["Bomb","?","?","?","?","?","Poison","?","?"],
+  //  ["Bomb","?","?","?","?","?","Bomb","?","?"],
+  //];
+  //const boardSize11x11 = [
+  //  ["?","?","?","?","Bomb","?","Red Cross","?","?","?","?"],
+  //  ["?","Poison","?","?","?","Bomb","?","?","?","?","?"],
+  //  ["?","Bomb","?","Typhoon","?","?","?","?","?","?","?"],
+  //  ["?","?","?","?","?","?","?","?","?","?","?"],
+  //  ["?","Poison","?","?","?","?","?","?","?","?","?"],
+  //  ["?","?","Typhoon","?","Bomb","?","?","?","Poison","?","?"],
+  //  ["?","?","?","?","?","?","?","?","?","?","?"],
+  //  ["?","?","?","Red Cross","?","?","Poison","?","?","Red Cross","?"],
+  //  ["?","?","?","?","?","?","?","?","?","?","?"],
+  //  ["Poison","?","?","?","?","?","Bomb","?","?","?","?"],
+  //  ["Bomb","?","?","?","?","?","?","?","?","?","?"],
+  //];
+  
 
   let boardData = boardData0;
   const gameBoard = document.getElementById("gameBoard");
@@ -62,6 +87,28 @@ document.addEventListener("DOMContentLoaded", () => {
   function createBoard() {
     gameBoard.innerHTML = "";
     gameBoard.style.gridTemplateColumns = 'repeat(${cols}, 80px)';
+    switch (selectedBoardSize) {
+      case "Default":
+        boardData = boardData1;
+        cols = 5;
+        rows = 5;
+        break;
+        case "boardSize7x7":
+          boardSize = boardSize7x7;
+          cols = 7;
+          rows = 7;
+          break;
+          case "boardSize9x9":
+          boardSize = boardSize9x9;
+          cols = 9;
+          rows = 9;
+          break;
+          case "boardSize11x11":
+          boardSize = boardSize11x11;
+          cols = 11;
+          rows = 11;
+          break;
+    }
 
     for (let row = 0; row < rows; row++) {
       for (let col = 0; col < cols; col++) {
@@ -107,33 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
         boardData = boardData1; // Default to board1 if something goes wrong
     }
   }
-
-  function updateBoardSize(selectedBoardSize) {
-    switch (selectedBoardSize) {
-      case "boardData1":
-        boardData = boardData1;
-        break;
-        case "boardSize7x7":
-          boardSize = boardSize7x7;
-          cols = 7;
-          rows = 7;
-          break;
-          case "boardSize9x9":
-          boardSize = boardSize9x9;
-          cols = 9;
-          rows = 9;
-          break;
-          case "boardSize11x11":
-          boardSize = boardSize11x11;
-          cols = 11;
-          rows = 11;
-          break;
-    }
-  }
  
 
   boardSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
+    const selectedBoardSize = event.target.value;
     updateBoardData(selectedBoard);
     createBoard(); // Redraw the board with the new data
   });
