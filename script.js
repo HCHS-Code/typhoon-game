@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function createBoard() {
     gameBoard.innerHTML = "";
-
+    
     for (let row = 0; row < 5; row++) {
       for (let col = 0; col < 5; col++) {
         const cell = document.createElement("div");
@@ -95,6 +95,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+    function generateRandomBoard() {
+      const board = [
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+      ];
+      const numQuestionMarks = 13;
+      const numBombs = 3;
+      const numTyphoons = 2;
+      const numPoisons = 3;
+      const numRedCrosses = 4; 
+    }
+    
+   
+    
   boardSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
     updateBoardData(selectedBoard);
