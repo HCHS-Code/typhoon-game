@@ -35,25 +35,50 @@ body {
 .cell:hover {
   background-color: #eee;
 }
+
+/* .revealed {
+  background-color: #f9f9f9;
+} */
+
 @keyframes bomb {
   0% {
-    background-color: #ef4b4b;
+    background-color: #d13b04;
+    font-size: 27px;
+    transform: rotate(5deg);
   }
   50% {
     background-color: rgb(247, 173, 13);
+    font-size: 24px;
+    transform: rotate(-5deg);
   }
   100% {
-    background-color: #ebcf51;
+    background-color: #f0c906;
+    font-size: 27px;
+    transform: rotate(5deg);
   }
 }
-.revealed {
-  background-color: #f9f9f9;
-}
 
-.revealed #bomb{
+ .bomb{
   animation-name: bomb;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes redCross {
+  0% {
+    background-color: #ddd;
+  }
+  100% {
+    background-color: #e02b2b;
+  }
+}
+
+ .redCross{
+  animation-name: redCross;
+  animation-duration: 1s;
+  animation-iteration-count: 4;
+  animation-timing-function: ease-in-out;
   animation-direction: alternate;
 }
