@@ -95,38 +95,36 @@ body {
 @keyframes redCross {
   0% {
     background-color: #ddd;
-    color:black;
+    
     font-family: 'Franklin Gothic Medium';
     width: 80px;
     height: 80px;
-    
-  }
-  50% {
     background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
-    width: 130px;
-    height: 130px;
+    background-size: 100% 100%;
   }
   100% {
-    background-color: #e02b2b;
+    background-color: #ddd;
+    background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
+    background-size: 100% 100%;
     color: white;
     font-family: 'Franklin Gothic Medium';
-    width: 80px;
-    height: 80px;
+    width: 80.5px;
+    height: 80.5px;
   }
 }
 
  .redCross{
   animation-name: redCross;
-  animation-duration: 4s;
-  animation-iteration-count: 5;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   animation-direction: alternate;
   animation-fill-mode: forwards;
 }
 
 @keyframes typhoon {
   0% {
-    background-color: #2b2be0;
+    background-image: url('https://media2.giphy.com/media/d3mlXPjoK1ROfr9u/200w.gif?cid=6c09b952x6lidybyxl72r2jribbinp0hr0ambp4ye09p31dr&ep=v1_gifs_search&rid=200w.gif&ct=g');
     color:black;
     font-family: 'impact';
     transform: rotate(-180deg);
@@ -135,7 +133,7 @@ body {
     font-size: 45px;
   }
   50% {
-    background-color: #5353ff;
+    background-image: url('https://media2.giphy.com/media/d3mlXPjoK1ROfr9u/200w.gif?cid=6c09b952x6lidybyxl72r2jribbinp0hr0ambp4ye09p31dr&ep=v1_gifs_search&rid=200w.gif&ct=g');
     color: white;
     font-family: 'impact';
     transform: rotate(180deg);
@@ -144,7 +142,7 @@ body {
     font-size: 30px;
   }
   100% {
-    background-color: #6969ff;
+    background-image: url('https://media2.giphy.com/media/d3mlXPjoK1ROfr9u/200w.gif?cid=6c09b952x6lidybyxl72r2jribbinp0hr0ambp4ye09p31dr&ep=v1_gifs_search&rid=200w.gif&ct=g');
     color: white;
     font-family: 'impact';
     transform: rotate(360deg);
