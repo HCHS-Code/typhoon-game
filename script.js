@@ -67,21 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const row = cell.dataset.row;
     const col = cell.dataset.col;
     const value = boardData[row][col];
-
+    const cellValue = value.replace(" ","");
     cell.textContent = value;
-    // The if else statement below makes the class revealed not work
     
-    if (value === "?") {
-      cell.classList.add("questionMark");
-    } else if (value === "Bomb") {
-      cell.classList.add("bomb");
-    } else if (value === "Red Cross") {
-      cell.classList.add("redCross");
-    } else if (value === "Poison") {
-      cell.classList.add("poison");
-    } else if (value === "Typhoon") {
-      cell.classList.add("typhoon");
-    } 
+    cell.classList.add(cellValue);
       
     cell.classList.add("revealed");
     cell.removeEventListener("click", handleCellClick); // Prevent re-clicking
