@@ -81,13 +81,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   let boardData = boardData0;
+  let boardSize = boardData0;
   const gameBoard = document.getElementById("gameBoard");
   const boardSelect = document.getElementById("boardSelect");
 
-  function createBoard() {
+  function createBoard(rows, cols) {
     gameBoard.innerHTML = "";
     gameBoard.style.gridTemplateColumns = 'repeat(${cols}, 80px)';
-    switch (selectedBoardSize) {
+    switch (sizeSelected) {
       case "Default":
         boardData = boardData1;
         cols = 5;
@@ -109,9 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
           rows = 11;
           break;
     }
-
+ 
+    
     for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
+      for (let col = 0; col <cols; col++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
         cell.dataset.row = row;
@@ -155,10 +157,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
  
-
   boardSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
-    const selectedBoardSize = event.target.value;
+
     updateBoardData(selectedBoard);
     createBoard(); // Redraw the board with the new data
   });
