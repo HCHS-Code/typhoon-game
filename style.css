@@ -97,18 +97,27 @@ body {
     background-color: #ddd;
     color:black;
     font-family: 'Franklin Gothic Medium';
+    width: 80px;
+    height: 80px;
     
+  }
+  50% {
+    background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
+    width: 130px;
+    height: 130px;
   }
   100% {
     background-color: #e02b2b;
     color: white;
     font-family: 'Franklin Gothic Medium';
+    width: 80px;
+    height: 80px;
   }
 }
 
  .redCross{
   animation-name: redCross;
-  animation-duration: 1s;
+  animation-duration: 4s;
   animation-iteration-count: 5;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
@@ -117,27 +126,31 @@ body {
 
 @keyframes typhoon {
   0% {
-    background-color: #ddd;
-    color:black;
-    font-family: 'Franklin Gothic Medium';
-    transform: rotate(-180deg);
-    width: 110px;
-    height: 110px;
-  }
-  80% {
     background-color: #2b2be0;
+    color:black;
+    font-family: 'impact';
+    transform: rotate(-180deg);
+    width: 160px;
+    height: 160px;
+    font-size: 45px;
+  }
+  50% {
+    background-color: #5353ff;
     color: white;
-    font-family: 'comic sans ms';
-    transform: rotate(360deg);
-    width: 110px;
-    height: 110px;
+    font-family: 'impact';
+    transform: rotate(180deg);
+    width: 140px;
+    height: 140px;
+    font-size: 30px;
   }
   100% {
-    background-color: #2b2be0;
+    background-color: #6969ff;
     color: white;
-    font-family: 'comic sans ms';
+    font-family: 'impact';
+    transform: rotate(360deg);
     width: 80px;
     height: 80px;
+    font-size: 20px;
   }
 }
 
