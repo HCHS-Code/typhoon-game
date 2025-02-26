@@ -95,27 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function createBoard(size) {
     gameBoard.innerHTML = "";
     gameBoard.style.gridTemplateColumns = 'repeat(${cols}, 80px)';
-    switch (sizeSelect) {
-      case "Default":
-        boardSize = boardSize5x5;
-        createBoard(5);
-        break;
-      case "boardSize7x7":
-        boardSize = boardSize7x7;
-        createBoard(7);
-        break;
-      case "boardSize9x9":
-        boardSize = boardSize9x9;
-        createBoard(9);
-        break;
-      case "boardSize11x11":
-        boardSize = boardSize11x11;
-        createBoard(11);
-        break;
-      default:
-        boardSize = boardSize5x5
-        createBoard(5); 
-    }
  
     
     for (let row = 0; row < size; row++) {
@@ -176,9 +155,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   sizeSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
-
+    switch (sizeSelect) {
+      case "Default":
+        boardSize = boardSize5x5;
+        createBoard(5);
+        break;
+      case "boardSize7x7":
+        boardSize = boardSize7x7;
+        createBoard(7);
+        break;
+      case "boardSize9x9":
+        boardSize = boardSize9x9;
+        createBoard(9);
+        break;
+      case "boardSize11x11":
+        boardSize = boardSize11x11;
+        createBoard(11);
+        break;
+      default:
+        boardSize = boardSize5x5
+        createBoard(7); 
+    }
     updateBoardData(selectedBoard);
-    createBoard(); // Redraw the board with the new data
+    createBoard(5); // Redraw the board with the new data
   });
 
   createBoard();
