@@ -10,16 +10,16 @@ Student is able to answer a question. If correct, they get a point
 One team cannot answer a question
 
 ## Red Cross Function
-One team can revive a poison player
+One team can revive a poisoned player
 
 ## Bomb Function
-Subtracts a point from team
+Subtracts a point from the team that selected it
 
 ## Typhoon Function
-Wipes one team points back to 0.
+Sets one team points back to 0.
 
 ### Type of code used
-HTML,CSS and JS
+HTML, CSS and JS
 
 ### Link to game
 https://hchs-chisolm.github.io/typhoon-game/
