@@ -1,5 +1,3 @@
-let cols;
-let rows;
 document.addEventListener("DOMContentLoaded", () => {
   //Game Board 0
   const boardData0 = [
@@ -45,6 +43,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ["?", "Bomb", "Typhoon", "Poison", "?"],
   ];
 
+  const boardSize5x5 = [
+    ["?", "?", "Bomb", "Red Cross", "?"],
+    ["Poison", "?", "?", "?", "Typhoon"],
+    ["?", "Bomb", "Red Cross", "Poison", "?"],
+    ["?", "?", "?", "Bomb", "Red Cross"],
+    ["Typhoon", "?", "Poison", "?", "Red Cross"],
+  ];
+
   const boardSize7x7 = [
     ["?","?","?","?","Bomb","?","Red Cross"],
     ["?","Poison","?","?","?","Bomb","?"],
@@ -79,41 +85,41 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Bomb","?","?","?","?","?","?","?","?","?","?"],
   ];
   
-
+ 
   let boardData = boardData0;
   let boardSize = boardData0;
   const gameBoard = document.getElementById("gameBoard");
   const boardSelect = document.getElementById("boardSelect");
+  const sizeSelect = document.getElementById("sizeSelect");
 
-  function createBoard(rows, cols) {
+  function createBoard(size) {
     gameBoard.innerHTML = "";
     gameBoard.style.gridTemplateColumns = 'repeat(${cols}, 80px)';
-    switch (sizeSelected) {
+    switch (sizeSelect) {
       case "Default":
-        boardData = boardData1;
-        cols = 5;
-        rows = 5;
+        boardSize = boardSize5x5;
+        createBoard(5);
         break;
-        case "boardSize7x7":
-          boardSize = boardSize7x7;
-          cols = 7;
-          rows = 7;
-          break;
-          case "boardSize9x9":
-          boardSize = boardSize9x9;
-          cols = 9;
-          rows = 9;
-          break;
-          case "boardSize11x11":
-          boardSize = boardSize11x11;
-          cols = 11;
-          rows = 11;
-          break;
+      case "boardSize7x7":
+        boardSize = boardSize7x7;
+        createBoard(7);
+        break;
+      case "boardSize9x9":
+        boardSize = boardSize9x9;
+        createBoard(9);
+        break;
+      case "boardSize11x11":
+        boardSize = boardSize11x11;
+        createBoard(11);
+        break;
+      default:
+        boardSize = boardSize5x5
+        createBoard(5); 
     }
  
     
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col <cols; col++) {
+    for (let row = 0; row < size; row++) {
+      for (let col = 0; col < size; col++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
         cell.dataset.row = row;
@@ -142,22 +148,33 @@ document.addEventListener("DOMContentLoaded", () => {
     switch (selectedBoard) {
       case "boardData1":
         boardData = boardData1;
+        createBoard(5);
         break;
       case "boardData2":
         boardData = boardData2;
+        createBoard(5);
         break;
       case "boardData3":
         boardData = boardData3;
+        createBoard(5);
         break;
       case "boardData4":
         boardData = boardData4;
+        createBoard(5);
         break;
       default:
         boardData = boardData1; // Default to board1 if something goes wrong
+        createBoard(5);
     }
   }
  
   boardSelect.addEventListener("change", (event) => {
+    const selectedBoard = event.target.value;
+
+    updateBoardData(selectedBoard);
+    createBoard(); // Redraw the board with the new data
+  });
+  sizeSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
 
     updateBoardData(selectedBoard);
