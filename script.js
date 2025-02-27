@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sizeSelect = document.getElementById("sizeSelect");
 
   function createBoard(size) {
+    
     gameBoard.innerHTML = "";
     gameBoard.style.gridTemplateColumns = 'repeat(${cols}, 80px)';
  
@@ -151,10 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedBoard = event.target.value;
 
     updateBoardData(selectedBoard);
-    createBoard(); // Redraw the board with the new data
+    createBoard(5); // Redraw the board with the new data
   });
   sizeSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
+    updateBoardData(selectedBoard);
     switch (sizeSelect) {
       case "Default":
         boardSize = boardSize5x5;
@@ -174,11 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       default:
         boardSize = boardSize5x5
-        createBoard(7); 
+        createBoard(5); 
     }
-    updateBoardData(selectedBoard);
-    createBoard(5); // Redraw the board with the new data
   });
 
-  createBoard();
 });
