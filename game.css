@@ -1,0 +1,219 @@
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.helpContainer {
+  text-align: center;
+  font-size: 24px;
+}
+
+.game-board {
+  display: grid;
+  grid-gap: 5px;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+.revealed {
+  background-color: #f9f9f9;
+} 
+
+@keyframes bomb {
+  0% {
+    background-color: #d13b04;
+    font-size: 27px;
+    transform: translate(0, 0) rotate(0deg);
+    color:white;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+  }
+  25%{
+    transform: translate(2px, 0px) rotate(2deg);
+    color:black;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 3px;
+  }
+  50% {
+    background-color: rgb(247, 173, 13);
+    font-size: 24px;
+    transform: translate(0, 0) rotate(0eg);
+    color:white;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+  }
+  75%{
+    transform: translate(-2px, 0px) rotate(-2deg);
+    color:black;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 3px;
+  }
+  100% {
+    background-color: #f0c906;
+    font-size: 27px;
+    transform: translate(0, 0) rotate(0deg);
+    color:white;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+  }
+}
+
+ .Bomb{
+  animation-name: bomb;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+@keyframes redCross {
+  0% {
+    background-color: #ddd;
+    
+    font-family: 'Franklin Gothic Medium';
+    width: 80px;
+    height: 80px;
+    background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
+    background-size: 100% 100%;
+  }
+  100% {
+    background-color: #ddd;
+    background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
+    background-size: 100% 100%;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    width: 80.5px;
+    height: 80.5px;
+  }
+}
+
+ .RedCross{
+  animation-name: redCross;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typhoon {
+  0% {
+    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
+    color:black;
+    font-family: 'impact';
+    transform: rotate(-180deg);
+    width: 160px;
+    height: 160px;
+    font-size: 45px;
+  }
+  50% {
+    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
+    color: grey;
+    font-family: 'impact';
+    transform: rotate(180deg);
+    width: 140px;
+    height: 140px;
+    font-size: 30px;
+  }
+  100% {
+    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
+    color: black;
+    font-family: 'impact';
+    transform: rotate(360deg);
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+}
+
+ .Typhoon{
+  animation-name: typhoon;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction:normal;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes  poison {
+  0% {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
+    color:black;
+    font-family: 'impact';
+    transform: skewY(-15deg);
+    border-radius: 1px;
+  }
+  5% {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
+    color:black;
+    font-family: 'impact'; 
+    transform: skewY(15deg); 
+    border-radius: 2px;
+  }
+  10% {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
+    color:black;
+    font-family: 'impact'; 
+    transform: skewY(-15deg); 
+    border-radius: 3px;
+  }
+  15% {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
+    color:black;
+    font-family: 'impact';
+     transform: skewY(15deg); 
+      border-radius: 4px;
+  }
+  20% {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
+    color:black;
+    font-family: 'impact';
+     transform: skewY(0deg); 
+      border-radius: 5px;
+  }
+  100% {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
+    color:whitesmoke;
+    font-family: 'impact';
+     transform: skewY(0deg);
+      border-radius: 7px;
+  }  
+}
+
+.Poison{
+  animation-name: poison;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}

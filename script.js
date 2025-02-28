@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
           cellSize = 5;
           break;
       case "boardData3":
-          cellSize = 7;
+          cellSize = 12;
           break;
       default:
           boardData = boardData1; // Default to board1 if something goes wrong

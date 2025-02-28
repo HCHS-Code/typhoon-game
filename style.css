@@ -1,228 +1,135 @@
-body {
-  font-family: sans-serif;
-  background-color: #f0f0f0;
-}
-
-.game-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
+/* Basic reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  text-align: center;
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --alt-text-color: #f5f5f5;
+  --accent-color: #4a90e2;
+  --header-bg: #f5f5f5;
+  --footer-bg: #f5f5f5;
 }
 
-.helpContainer {
-  text-align: center;
-  font-size: 24px;
+html[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --alt-text-color: #f5f5f5;
+  --accent-color: #4a90e2;
+  --header-bg: #f5f5f5;
+  --footer-bg: #f5f5f5;
 }
 
-.game-board {
-  display: grid;
-  grid-template-columns: repeat(5, 80px);
-  grid-gap: 5px;
-  margin-top: 20px;
+html[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --alt-text-color: #121212;
+  --accent-color: #64b5f6;
+  --header-bg: #1e1e1e;
+  --footer-bg: #1e1e1e;
 }
 
-.cell {
-  width: 80px;
-  height: 80px;
-  background-color: #ddd;
-  border: 1px solid #ccc;
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+
+  /* transition: background-color 0.3s, color 0.3s; */
+}
+
+header {
+  background-color: var(--header-bg);
+  padding: 1rem;
   display: flex;
-  justify-content: center;
+  padding-left: 5rem;
+  /* justify-content: space-between; */
   align-items: center;
-  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav li {
+  margin-left: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--alt-text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
-  user-select: none;
+  margin-top: 1rem;
+
+  transition: all 0.3s;
 }
 
-.cell:hover {
-  background-color: #eee;
+button:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
 }
 
-.revealed {
-  background-color: #f9f9f9;
-} 
-
-@keyframes bomb {
-  0% {
-    background-color: #d13b04;
-    font-size: 27px;
-    transform: translate(0, 0) rotate(0deg);
-    color:white;
-    border-radius: 10px;
-    border-color: white;
-    border-width: 2px;
-  }
-  25%{
-    transform: translate(2px, 0px) rotate(2deg);
-    color:black;
-    border-radius: 10px;
-    border-color: black;
-    border-width: 3px;
-  }
-  50% {
-    background-color: rgb(247, 173, 13);
-    font-size: 24px;
-    transform: translate(0, 0) rotate(0eg);
-    color:white;
-    border-radius: 10px;
-    border-color: white;
-    border-width: 2px;
-  }
-  75%{
-    transform: translate(-2px, 0px) rotate(-2deg);
-    color:black;
-    border-radius: 10px;
-    border-color: black;
-    border-width: 3px;
-  }
-  100% {
-    background-color: #f0c906;
-    font-size: 27px;
-    transform: translate(0, 0) rotate(0deg);
-    color:white;
-    border-radius: 10px;
-    border-color: white;
-    border-width: 2px;
-  }
+button:active {
+  transform: scale(0.95);
+  transition: all 0.05s;
 }
 
- .Bomb{
-  animation-name: bomb;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: normal;
+section {
+  margin-bottom: 2rem;
 }
 
-@keyframes redCross {
-  0% {
-    background-color: #ddd;
-    
-    font-family: 'Franklin Gothic Medium';
-    width: 80px;
-    height: 80px;
-    background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
-    background-size: 100% 100%;
-  }
-  100% {
-    background-color: #ddd;
-    background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
-    background-size: 100% 100%;
-    color: white;
-    font-family: 'Franklin Gothic Medium';
-    width: 80.5px;
-    height: 80.5px;
-  }
+footer {
+  background-color: var(--footer-bg);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
- .RedCross{
-  animation-name: redCross;
-  animation-duration: .5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
+.center-text{
+  text-align: center;
 }
 
-@keyframes typhoon {
-  0% {
-    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
-    color:black;
-    font-family: 'impact';
-    transform: rotate(-180deg);
-    width: 160px;
-    height: 160px;
-    background-size: auto 100%;
-    font-size: 45px;
-  }
-  50% {
-    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
-    color: grey;
-    font-family: 'impact';
-    transform: rotate(180deg);
-    width: 140px;
-    height: 140px;
-    background-size: auto 100%;
-    font-size: 30px;
-  }
-  100% {
-    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
-    color: black;
-    font-family: 'impact';
-    transform: rotate(360deg);
-    width: 80px;
-    height: 80px;
-    background-size: auto 100%;
-    font-size: 20px;
-  }
-}
-
- .Typhoon{
-  animation-name: typhoon;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-direction:normal;
-  animation-fill-mode: forwards;
+/* Simple responsive design */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 30px;
   
-}
+  }
 
-@keyframes  poison {
-  0% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact';
-    transform: skewY(-15deg);
-    border-radius: 1px;
+  header {
+      flex-direction: column;
+      padding-left: 0rem;
   }
-  5% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact'; 
-    transform: skewY(15deg); 
-    border-radius: 2px;
+  
+  nav ul {
+      margin-top: 1rem;
   }
-  10% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact'; 
-    transform: skewY(-15deg); 
-    border-radius: 3px;
-  }
-  15% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact';
-     transform: skewY(15deg); 
-      border-radius: 4px;
-  }
-  20% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact';
-     transform: skewY(0deg); 
-      border-radius: 5px;
-  }
-  100% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:whitesmoke;
-    font-family: 'impact';
-     transform: skewY(0deg);
-      border-radius: 7px;
-  }  
-}
-
-.Poison{
-  animation-name: poison;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
 }

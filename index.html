@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bomb/Typhoon Review Game</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="game.css"/>
     <link rel="stylesheet" href="assets/css/hamburgerMenu/hamburger.css" />
     <link rel="stylesheet" href="assets/css/hamburgerMenu/_hamburger.css" />
   </head>
@@ -28,24 +29,28 @@
       </div>
     </div>
 
-    <!-- Had to add "Game Container" class, wouldn't work without it (free to help me in comments) -->
-    <div class="game-container">
-      <div class="container">
-        <h1>Bomb/Typhoon Review Game</h1>
-  
-        <label for="boardSelect">Select Game Board:</label>
-        <select id="boardSelect">
-          <option value="boardData1">Board 1</option>
-          <option value="boardData2">Board 2</option>
-          <option value="boardData3">Board 3</option>
-          <option value="boardData4">Board 4</option>
-        </select>
-  
-        <div class="game-board" id="gameBoard">
-          <!-- Game board cells will be generated here -->
+    <h1 class="center-text">Bomb/Typhoon Review Game</h1>
+    <section class="content">
+      <div class="game-container">
+        <div class="container">
+                
+          <label for="boardSelect">Select Game Size:</label>
+          <select id="boardSelect">
+            <option value="boardData1">Small</option>
+            <option value="boardData2">Medium</option>
+            <option value="boardData3">Large</option>
+          </select>
+
+          <div class="game-board" id="gameBoard">
+            <!-- Game cells will generate like in the Typhoon Game -->
+          </div>
+
+          <button id="randomize">RANDOMIZE</button>
+          <button id="reveal">REVEAL (debugging)</button>
         </div>
       </div>
-    </div>
+    </section>
+
     <script src="script.js"></script>
     <script src="burger.js"></script>
   </body>
