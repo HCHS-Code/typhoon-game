@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function createBoard(size) {
     
     gameBoard.innerHTML = "";
-    gameBoard.style.gridTemplateColumns = 'repeat(${cols}, 80px)';
+    gameBoard.style.gridTemplateColumns = 'repeat(${size}, 80px)';
  
     
     for (let row = 0; row < size; row++) {
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedBoard = event.target.value;
     updateBoardData(selectedBoard);
     switch (sizeSelect) {
-      case "Default":
+      case "boardSize5x5":
         boardSize = boardSize5x5;
         createBoard(5);
         break;
