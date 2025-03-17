@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
+  createBoard(5)
 
   function handleCellClick(event) {
     const cell = event.target;
@@ -152,32 +153,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedBoard = event.target.value;
 
     updateBoardData(selectedBoard);
-    createBoard(5); // Redraw the board with the new data
+    createBoard(7); // Redraw the board with the new data
   });
   sizeSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
     updateBoardData(selectedBoard);
-    switch (sizeSelect) {
-      case "boardSize5x5":
-        boardSize = boardSize5x5;
-        createBoard(5);
-        break;
-      case "boardSize7x7":
-        boardSize = boardSize7x7;
-        createBoard(7);
-        break;
-      case "boardSize9x9":
-        boardSize = boardSize9x9;
-        createBoard(9);
-        break;
-      case "boardSize11x11":
-        boardSize = boardSize11x11;
-        createBoard(11);
-        break;
-      default:
-        boardSize = boardSize5x5
-        createBoard(5); 
-    }
+  if (boardSize === "boardSize5x5") {
+    createBoard(5);
+  } else if (boardSize === "boardSize7x7") {
+   createBoard(7);
+  } else if (boardSize === "boardSize9x9") {
+    createBoard(9);
+  } else if (boardSize === "boardSize11x11"){
+    createBoard(11);
+  };
+
+    
   });
 
 });
