@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
  
   let boardData = boardData0;
-  let boardSize = boardData0;
   const gameBoard = document.getElementById("gameBoard");
   const boardSelect = document.getElementById("boardSelect");
   const sizeSelect = document.getElementById("sizeSelect");
