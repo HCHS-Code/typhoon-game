@@ -14,14 +14,14 @@ body {
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(5, 80px);
+  grid-template-columns: repeat(11, 40px);
   grid-gap: 5px;
   margin-top: 20px;
 }
 
 .cell {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   background-color: #ddd;
   border: 1px solid #ccc;
   display: flex;

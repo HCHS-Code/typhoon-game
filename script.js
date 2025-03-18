@@ -148,25 +148,40 @@ document.addEventListener("DOMContentLoaded", () => {
         createBoard(5);
     }
   }
+  function updateBoardSize(sizeSelected) {
+    switch (sizeSelected) {
+      case "boardSize5x5":
+        boardData = boardSize5x5;
+        createBoard(5);
+        break;
+      case "boardSize7x7":
+        boardData = boardSize7x7;
+        createBoard(7);
+        break;
+      case "boardSize9x9":
+        boardData = boardSize9x9;
+        createBoard(9);
+        break;
+      case "boardSize11x11":
+        boardData = boardSize11x11;
+        createBoard(11);
+        break;
+      default:
+        boardData = boardSize5x5;
+        createBoard(5);
+    }
+  }
  
   boardSelect.addEventListener("change", (event) => {
     const selectedBoard = event.target.value;
 
     updateBoardData(selectedBoard);
-    createBoard(7); // Redraw the board with the new data
+    createBoard(5); // Redraw the board with the new data
   });
   sizeSelect.addEventListener("change", (event) => {
-    const selectedBoard = event.target.value;
-    updateBoardData(selectedBoard);
-  if (boardSize === "boardSize5x5") {
-    createBoard(5);
-  } else if (boardSize === "boardSize7x7") {
-   createBoard(7);
-  } else if (boardSize === "boardSize9x9") {
-    createBoard(9);
-  } else if (boardSize === "boardSize11x11"){
-    createBoard(11);
-  };
+    const sizeSelected = event.target.value;
+    updateBoardSize(sizeSelected);
+  
 
     
   });
