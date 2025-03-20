@@ -14,14 +14,35 @@ body {
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(11, 40px);
+  grid-template-columns: repeat(5, 80px);
+  grid-gap: 5px;
+  margin-top: 20px;
+}
+
+.game-board7x7 {
+  display: grid;
+  grid-template-columns: repeat(7, 80px);
+  grid-gap: 5px;
+  margin-top: 20px;
+}
+
+.game-board9x9 {
+  display: grid;
+  grid-template-columns: repeat(9, 80px);
+  grid-gap: 5px;
+  margin-top: 20px;
+}
+
+.game-board11x11 {
+  display: grid;
+  grid-template-columns: repeat(11, 80px);
   grid-gap: 5px;
   margin-top: 20px;
 }
 
 .cell {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   background-color: #ddd;
   border: 1px solid #ccc;
   display: flex;

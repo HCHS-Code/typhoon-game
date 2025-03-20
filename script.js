@@ -152,22 +152,32 @@ document.addEventListener("DOMContentLoaded", () => {
       case "boardSize5x5":
         boardData = boardSize5x5;
         createBoard(5);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       case "boardSize7x7":
         boardData = boardSize7x7;
         createBoard(7);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
         break;
       case "boardSize9x9":
         boardData = boardSize9x9;
         createBoard(9);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
         break;
       case "boardSize11x11":
         boardData = boardSize11x11;
         createBoard(11);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
         break;
       default:
         boardData = boardSize5x5;
         createBoard(5);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board");
     }
   }
  
@@ -180,9 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sizeSelect.addEventListener("change", (event) => {
     const sizeSelected = event.target.value;
     updateBoardSize(sizeSelected);
-  
 
-    
   });
 
 });
