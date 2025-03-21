@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Typhoon", "?", "Poison", "?", "Red Cross"],
   ];
   // Game Board 1
-  const boardData1 = [
+  const boardData5x5_1 = [
     ["?", "?", "Bomb", "Red Cross", "?"],
     ["Poison", "?", "?", "?", "Typhoon"],
     ["?", "Bomb", "Red Cross", "Poison", "?"],
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Game Board 2
-  const boardData2 = [
+  const boardData5x5_2 = [
     ["?", "Bomb", "?", "Poison", "?"],
     ["?", "?", "Red Cross", "?", "Bomb"],
     ["Poison", "?", "Typhoon", "?", "?"],
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Game Board 3
-  const boardData3 = [
+  const boardData5x5_3 = [
     ["?", "?", "Bomb", "?", "Poison"],
     ["?", "Typhoon", "?", "?", "?"],
     ["Red Cross", "Poison", "?", "?", "Bomb"],
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Game Board 4
-  const boardData4 = [
+  const boardData5x5_4 = [
     ["?", "?", "Bomb", "?", "Poison"],
     ["?", "Typhoon", "?", "?", "?"],
     ["Red Cross", "Poison", "?", "?", "Bomb"],
@@ -127,43 +127,82 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateBoardData(selectedBoard) {
     switch (selectedBoard) {
       case "boardData1":
-        boardData = boardData1;
+        boardData = boardData5x5_1;
         createBoard(5);
         document.getElementById("gameBoard").removeAttribute("game-board");
         document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       case "boardData2":
-        boardData = boardData2;
+        boardData = boardData5x5_2;
         createBoard(5);
         document.getElementById("gameBoard").removeAttribute("game-board");
         document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       case "boardData3":
-        boardData = boardData3;
+        boardData = boardData5x5_3;
         createBoard(5);
         document.getElementById("gameBoard").removeAttribute("game-board");
         document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       case "boardData4":
-        boardData = boardData4;
+        boardData = boardData5x5_4;
         createBoard(5);
         document.getElementById("gameBoard").removeAttribute("game-board");
         document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       default:
-        boardData = boardData1; // Default to board1 if something goes wrong
+        boardData = boardData5x5_1; // Default to board1 if something goes wrong
         createBoard(5);
         document.getElementById("gameBoard").removeAttribute("game-board");
         document.getElementById("gameBoard").setAttribute("class", "game-board");
     }
   }
-  function updateBoardSize(sizeSelected) {
+  function updateBoardSize(sizeSelected,selectedBoard) {
+    if (selectedBoard === "boardData1") {
+      switch (sizeSelected) {
+        case "boardSize5x5":
+          boardData = boardSize5x5;
+            createBoard(5);
+            document.getElementById("gameBoard").removeAttribute("game-board");
+            document.getElementById("gameBoard").setAttribute("class", "game-board");
+          break;
+        case "boardSize7x7":
+          boardData = boardSize7x7;
+          createBoard(7);
+          document.getElementById("gameBoard").removeAttribute("game-board");
+          document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+          break;
+        case "boardSize9x9":
+          boardData = boardSize9x9;
+          createBoard(9);
+          document.getElementById("gameBoard").removeAttribute("game-board");
+          document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
+          break;
+        case "boardSize11x11":
+          boardData = boardSize11x11;
+          createBoard(11);
+          document.getElementById("gameBoard").removeAttribute("game-board");
+          document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
+          break;
+        default:
+          boardData = boardSize5x5;
+          createBoard(5);
+          document.getElementById("gameBoard").removeAttribute("game-board");
+          document.getElementById("gameBoard").setAttribute("class", "game-board");
+      }
+    }else if(selectedBoard === "boardData2"){
+
+    }else if(selectedBoard === "boardData3"){
+
+    }else if(selectedBoard === "boardData4"){
+
+    };
     switch (sizeSelected) {
       case "boardSize5x5":
-        boardData = boardSize5x5;
-        createBoard(5);
-        document.getElementById("gameBoard").removeAttribute("game-board");
-        document.getElementById("gameBoard").setAttribute("class", "game-board");
+        boardData = boardSize5x5_1;
+          createBoard(5);
+          document.getElementById("gameBoard").removeAttribute("game-board");
+          document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       case "boardSize7x7":
         boardData = boardSize7x7;
