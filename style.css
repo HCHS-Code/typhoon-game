@@ -47,3 +47,54 @@ body {
 .revealed {
   background-color: #fff;
 }
+
+.bug-report {
+  width: 1px;
+  height: 1px;
+  padding-top: 7vh;
+  padding-left: 94vh;
+}
+
+.reportBtn {
+  background-color: #ffffff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 100;
+  font-size: 2px;
+}
+
+img{
+  width: 40px;
+  height: 40px;
+}
+
+
+.warning{
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: visible;
+  transition: transform 0.4s, top 0.4s;
+}  
+
+.continueBtn{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: lightskyblue;
+  color: black;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
