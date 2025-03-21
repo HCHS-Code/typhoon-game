@@ -129,22 +129,32 @@ document.addEventListener("DOMContentLoaded", () => {
       case "boardData1":
         boardData = boardData1;
         createBoard(5);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       case "boardData2":
         boardData = boardData2;
         createBoard(5);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       case "boardData3":
         boardData = boardData3;
         createBoard(5);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       case "boardData4":
         boardData = boardData4;
         createBoard(5);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board");
         break;
       default:
         boardData = boardData1; // Default to board1 if something goes wrong
         createBoard(5);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board");
     }
   }
   function updateBoardSize(sizeSelected) {
