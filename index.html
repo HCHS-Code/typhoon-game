@@ -44,21 +44,40 @@
         <div class="game-board" id="gameBoard">
           <!-- Game board cells will be generated here -->
         </div>
+        
         <div id="myNav" class="overlay">
-
-          <!-- Button to close the overlay navigation -->
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        
-          <!-- Overlay content -->
           <div class="overlay-content">
-            
+            <h2>Register Form</h2>
+              <div class="team-input-container">
+                <i class="fa fa-user icon">Team 1</i>
+                <input class="input-field" type="text" placeholder="Username" name="usrnm">
+                
+                <i class="fa fa-user icon">Team 2</i>
+                <input class="input-field" type="text" placeholder="Username" name="usrnm">
+              </div>
+
+              <div class="input-container">
+                <i class="fa fa-envelope icon"></i>
+                <input class="input-field" type="text" placeholder="Email" name="email">
+              </div>
+
+              <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input class="input-field" type="password" placeholder="Password" name="psw">
+              </div>
+
           </div>
-        
         </div>
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="https://png.pngtree.com/png-vector/20230209/ourmid/pngtree-notebook-icon-png-image_6591697.png" style= "width: 50; height: 50"></span>
+        <span style="cursor:pointer;flex-direction: column;" onclick="openNav()">
+          
+          <img src="assets/images/sketchbook.png" alt="sketchbook icon" style="width: 120; height: 120px;">
+        </span>
+        
+        
       </div>
     </div>
-    <script src-="overlay.js"></script>
+    <script src="overlay.js"></script>
     <script src="script.js"></script>
     <script src="burger.js"></script>
   </body>
