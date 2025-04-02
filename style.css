@@ -262,7 +262,20 @@ img{
 }  
 
 .continueBtn{
-  width: 100%;
+  width: 47%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: lightskyblue;
+  color: black;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelBtn{
+  width: 47%;
   margin-top: 50px;
   padding: 10px 0;
   background: lightskyblue;
