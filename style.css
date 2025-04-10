@@ -228,10 +228,7 @@ body {
 }
 
 .bug-report {
-  width: 1px;
-  height: 1px;
   padding-top:10vh;
-  justify-items: right;
 }
 
 .reportBtn {
