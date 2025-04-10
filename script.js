@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Typhoon", "?", "Poison", "?", "Red Cross"],
   ];
 
-  const boardSize7x7_1 = [
+  const boardSize7x7 = [
     ["?","?","?","?","Bomb","?","Red Cross"],
     ["?","Poison","?","?","?","Bomb","?"],
     ["?","Bomb","?","Typhoon","?","?","?"],
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["?","?","Typhoon","?","Bomb","?","?"],
     ["Bomb","?","?","?","?","?","Poison"],
   ];
-  const boardSize9x9_1 = [
+  const boardSize9x9 = [
     ["9","?","?","?","Bomb","?","Red Cross","?","?"],
     ["?","Poison","?","?","?","Bomb","?","?","?"],
     ["?","Bomb","?","Bomb","?","?","?","?","?"],
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
    ["Bomb","?","?","?","?","?","Poison","?","?"],
     ["Bomb","?","?","?","?","?","Bomb","?","?"],
   ];
-  const boardSize11x11_1 = [
+  const boardSize11x11 = [
     ["11","?","?","?","Bomb","?","Red Cross","?","?","Bomb","?"],
     ["?","Poison","?","?","?","Bomb","?","?","?","?","?"],
     ["?","Bomb","?","Typhoon","?","?","?","Typhoon","?","?","?"],
@@ -189,6 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameBoard = document.getElementById("gameBoard");
   const boardSelect = document.getElementById("boardSelect");
   const sizeSelect = document.getElementById("sizeSelect");
+  
 
   function createBoard(size) {
     
@@ -256,205 +257,40 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("gameBoard").setAttribute("class", "game-board");
     }
   }
-  function updateBoardSize(sizeSelected,selectedBoard) {
-      switch (sizeSelected, selectedBoard) {
-        case (sizeSelected === "boardSize5x5" && selectedBoard === "boardData1"):
-          boardData = boardData5x5_1;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board");
-          break;
-        case (sizeSelected === "boardSize5x5" && selectedBoard === "boardData2"):
-          boardData = boardData5x5_2;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board");
-          break;
-        case (sizeSelected === "boardSize5x5" && selectedBoard === "boardData3"):
-          boardData = boardData5x5_3;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board");
-          break;
-        case (sizeSelected === "boardSize5x5" && selectedBoard === "boardData4"):
-          boardData = boardData5x5_4;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board");
-          break;
-        case (sizeSelected === "boardSize7x7" && selectedBoard === "boardData1"):
-          boardData = boardSize7x7_1;
-          createBoard(7);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
-          break;
-        case (sizeSelected === "boardSize7x7" && selectedBoard === "boardData2"):
-          boardData = boardSize7x7_2;
-          createBoard(7);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
-          break;
-        case (sizeSelected === "boardSize7x7" && selectedBoard === "boardData3"):
-          boardData = boardSize7x7_3;
-          createBoard(7);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
-          break;
-        case (sizeSelected === "boardSize7x7" && selectedBoard === "boardData4"):
-          boardData = boardSize7x7_4;
-          createBoard(7);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
-          break;
-        case (sizeSelected === "boardSize9x9" && selectedBoard === "boardData1"):
-          boardData = boardSize9x9_1;
-          createBoard(9);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
-          break;
-        case (sizeSelected === "boardSize9x9" && selectedBoard === "boardData2"):
-          boardData = boardSize9x9_2;
-          createBoard(9);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
-          break;
-        case (sizeSelected === "boardSize9x9" && selectedBoard === "boardData3"):
-          boardData = boardSize9x9_3;
-          createBoard(9);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
-          break;
-        case (sizeSelected === "boardSize9x9" && selectedBoard === "boardData4"):
-          boardData = boardSize9x9_4;
-          createBoard(9);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
-          break;
-        case (sizeSelected === "boardSize11x11" && selectedBoard === "boardData1"):
-          boardData = boardSize11x11_1;
-          createBoard(11);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          break;
-        case (sizeSelected === "boardSize11x11" && selectedBoard === "boardData2"):
-          boardData = boardSize11x11_2;
-          createBoard(11);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          break;
-        case (sizeSelected === "boardSize11x11" && selectedBoard === "boardData3"):
-          boardData = boardSize11x11_3;
-          createBoard(11);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          break;
-        case (sizeSelected === "boardSize11x11" && selectedBoard === "boardData4"):
-          boardData = boardSize11x11_4;
-          createBoard(11);
-          document.getElementById("gameBoard").removeAttribute("game-board");
-          document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          break;
-        default:
-          boardData = boardData5x5_1;
+  function updateBoardSize(sizeSelected) {
+
+    switch (sizeSelected) {
+      case "boardSize5x5":
+        boardData = boardSize5x5;
           createBoard(5);
           document.getElementById("gameBoard").removeAttribute("game-board");
           document.getElementById("gameBoard").setAttribute("class", "game-board");
-      }
-      switch (sizeSelected){
-        case "boardSize5x5":
-          if (selectedBoard === "boardData1") {
-            boardData = boardData5x5_1;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          } else if (selectedBoard === "boardData2") {
-            boardData = boardData5x5_2;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          }else if (selectedBoard === "boardData3") {
-            boardData = boardData5x5_3;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          }else if(selectedBoard === "boardData4") {
-            boardData = boardData5x5_4;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          }
         break;
-        case "boardSize7x7":
-          if (selectedBoard === "boardData1") {
-            boardData = boardSize7x7_1;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
-          } else if (selectedBoard === "boardData2") {
-            boardData = boardSize7x7_2;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
-          }else if (selectedBoard === "boardData3") {
-            boardData = boardSize7x7_3;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
-          }else if(selectedBoard === "boardData4") {
-            boardData = boardSize7x7_4;
-            createBoard(5);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-boardx7");
-          }
+      case "boardSize7x7":
+        boardData = boardSize7x7;
+        createBoard(7);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
         break;
-        case "boardSize9x9":
-          if (selectedBoard === "boardData1") {
-            boardData = boardSize9x9_1;
-            createBoard(9);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
-          } else if (selectedBoard === "boardData2") {
-            boardData = boardSize9x9_2;
-            createBoard(9);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
-          }else if (selectedBoard === "boardData3") {
-            boardData = boardSize9x9_3;
-            createBoard(9);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
-          }else if(selectedBoard === "boardData4") {
-            boardData = boardSize9x9_4;
-            createBoard(9);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
-          }
+      case "boardSize9x9":
+        boardData = boardSize9x9;
+        createBoard(9);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
         break;
-        case "boardSize11x11":
-          if (selectedBoard === "boardData1") {
-            boardData = boardSize11x11_1;
-            createBoard(11);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          } else if (selectedBoard === "boardData2") {
-            boardData = boardSize11x11_2;
-            createBoard(11);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          }else if (selectedBoard === "boardData3") {
-            boardData = boardSize11x11_3;
-            createBoard(11);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          }else if(selectedBoard === "boardData4") {
-            boardData = boardSize11x11_4;
-            createBoard(11);
-            document.getElementById("gameBoard").removeAttribute("game-board");
-            document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
-          }
+      case "boardSize11x11":
+        boardData = boardSize11x11;
+        createBoard(11);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
         break;
-        default:
-      }
+      default:
+        boardData = boardSize5x5;
+        createBoard(5);
+        document.getElementById("gameBoard").removeAttribute("game-board");
+        document.getElementById("gameBoard").setAttribute("class", "game-board");
+    }
+ 
   };
  
   boardSelect.addEventListener("change", (event2) => {
@@ -463,10 +299,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBoardData(selectedBoard);
     createBoard(5); // Redraw the board with the new data
   });
-  sizeSelect.addEventListener("change", (event, event2) => {
+  sizeSelect.addEventListener("change", (event) => {
     const sizeSelected = event.target.value;
-    const selectedBoard = event2.target.value;
-    updateBoardSize(sizeSelected, selectedBoard);
+    updateBoardSize(sizeSelected);
 
   });
 
