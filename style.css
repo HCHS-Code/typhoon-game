@@ -227,6 +227,8 @@ body {
   animation-fill-mode: forwards;
 }
 
+//Notebook below
+
 /* The Overlay (background) */
 .overlay {
   height: 0%;
@@ -322,5 +324,64 @@ body {
 
 .input-field:focus {
   border: 2px solid dodgerblue;
+}
+
+//Bug-report below
+
+.bug-report {
+  padding-top:10vh;
+}
+
+.reportBtn {
+  background-color: #ffffff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 100;
+  font-size: 2px;
+}
+
+img{
+  width: 40px;
+  height: 40px;
+}
+
+
+.warning{
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  text-align: center;
+  color: #333;
+  visibility: visible;
+  right: 27px;
+}  
+
+.continueBtn{
+  width: 47%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: lightskyblue;
+  color: black;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelBtn{
+  width: 47%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: lightskyblue;
+  color: black;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
