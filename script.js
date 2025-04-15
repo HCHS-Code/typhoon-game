@@ -189,7 +189,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameBoard = document.getElementById("gameBoard");
   const boardSelect = document.getElementById("boardSelect");
   const sizeSelect = document.getElementById("sizeSelect");
+  const option1 = document.getElementById("option1");
+  const option2 = document.getElementById("option2");
+  const option3 = document.getElementById("option3");
+  const option4 = document.getElementById("option4");
+  const option5 = document.getElementById("option5");
+  const option6 = document.getElementById("option6");
+  const option7 = document.getElementById("option7");
+  const option8 = document.getElementById("option8");
+  const option9 = document.getElementById("option9");
+  const option10 = document.getElementById("option10");
+  const option11 = document.getElementById("option11");
+  const option12 = document.getElementById("option12");
+  const option13 = document.getElementById("option13");
+  const option14 = document.getElementById("option14");
+  const option15 = document.getElementById("option15");
+  const option16 = document.getElementById("option16");
   
+  function button1() {
+    boardData = boardSize7x7;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  }
 
   function createBoard(size) {
     
@@ -292,6 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
  
   };
+  
  
   boardSelect.addEventListener("change", (event2) => {
     const selectedBoard = event2.target.value;
@@ -303,6 +326,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const sizeSelected = event.target.value;
     updateBoardSize(sizeSelected);
 
+  });
+  option1.addEventListener("click", () => {
+    boardData = boardSize7x7_2;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
   });
 
 });

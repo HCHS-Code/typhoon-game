@@ -8,8 +8,22 @@ body {
   margin: 0;
 }
 
+.boardOptions {
+  width: 660px;
+  height: 420px;
+  background-color: rgb(30, 118, 92);
+}
 .container {
   text-align: center;
+}
+
+.titleHolder{
+  flex-direction: row;
+  width: 660px;
+}
+
+.popTextOptions{
+  color: rgb(225, 148, 6)
 }
 
 .game-board {
@@ -39,6 +53,8 @@ body {
   grid-gap: 5px;
   margin-top: 20px;
 }
+
+
 
 .cell {
   width: 80px;
