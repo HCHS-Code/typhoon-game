@@ -328,10 +328,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
   option1.addEventListener("click", () => {
+    boardData = boardSize5x5;
+    createBoard(5);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option2.addEventListener("click", () => {
+    boardData = boardData5x5_2;
+    createBoard(5);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option3.addEventListener("click", () => {
+    boardData = boardData5x5_3;
+    createBoard(5);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option4.addEventListener("click", () => {
+    boardData = boardData5x5_4;
+    createBoard(5);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option5.addEventListener("click", () => {
     boardData = boardSize7x7_2;
     createBoard(7);
     document.getElementById("gameBoard").removeAttribute("game-board");
     document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
   });
+  option6.addEventListener("click", () => {
+    boardData = boardSize7x7_2;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option1.addEventListener("click", () => {
+    boardData = boardSize7x7_2;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option1.addEventListener("click", () => {
+    boardData = boardSize7x7_2;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option1.addEventListener("click", () => {
+    boardData = boardSize7x7_2;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option1.addEventListener("click", () => {
+    boardData = boardSize7x7_2;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option1.addEventListener("click", () => {
+    boardData = boardSize7x7_2;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+  option1.addEventListener("click", () => {
+    boardData = boardSize7x7_2;
+    createBoard(7);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+  });
+
 
 });
