@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Typhoon", "?", "Poison", "?", "Red Cross"],
   ];
   // Game Board 1
-  const boardData5x5_1 = [
-    ["d", "?", "Bomb", "Red Cross", "?"],
+  const boardSize5x5 = [
+    ["5", "?", "Bomb", "Red Cross", "?"],
     ["Poison", "?", "?", "?", "Typhoon"],
     ["?", "Bomb", "Red Cross", "Poison", "?"],
     ["?", "?", "?", "Bomb", "Red Cross"],
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Game Board 2
   const boardData5x5_2 = [
-    ["?", "Bomb", "?", "Poison", "?"],
+    ["5-2", "Bomb", "?", "Poison", "?"],
     ["?", "?", "Red Cross", "?", "Bomb"],
     ["Poison", "?", "Typhoon", "?", "?"],
     ["?", "Red Cross", "?", "?", "?"],
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Game Board 3
   const boardData5x5_3 = [
-    ["?", "?", "Bomb", "?", "Poison"],
+    ["5-3", "?", "Bomb", "?", "Poison"],
     ["?", "Typhoon", "?", "?", "?"],
     ["Red Cross", "Poison", "?", "?", "Bomb"],
     ["?", "?", "?", "Red Cross", "?"],
@@ -36,23 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Game Board 4
   const boardData5x5_4 = [
-    ["?", "?", "Bomb", "?", "Poison"],
+    ["5-4", "?", "Bomb", "?", "Poison"],
     ["?", "Typhoon", "?", "?", "?"],
     ["Red Cross", "Poison", "?", "?", "Bomb"],
     ["?", "?", "?", "Red Cross", "?"],
     ["?", "Bomb", "Typhoon", "Poison", "?"],
   ];
 
-  const boardSize5x5 = [
-    ["?", "?", "Bomb", "Red Cross", "?"],
-    ["Poison", "?", "?", "?", "Typhoon"],
-    ["?", "Bomb", "Red Cross", "Poison", "?"],
-    ["?", "?", "?", "Bomb", "Red Cross"],
-    ["Typhoon", "?", "Poison", "?", "Red Cross"],
-  ];
-
   const boardSize7x7 = [
-    ["?","?","?","?","Bomb","?","Red Cross"],
+    ["7","?","?","?","Bomb","?","Red Cross"],
     ["?","Poison","?","?","?","Bomb","?"],
     ["?","Bomb","?","Typhoon","?","?","?"],
     ["?","?","?","?","?","?","?"],
@@ -61,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Bomb","?","?","?","?","?","Poison"],
   ];
   const boardSize7x7_2 = [
-    ["?","?","?","?","Bomb","?","Red Cross"],
+    ["7-2","?","?","?","Bomb","?","Red Cross"],
     ["?","Poison","?","?","?","Bomb","?"],
     ["?","Bomb","?","Typhoon","?","?","?"],
     ["?","?","?","?","?","?","?"],
@@ -70,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Bomb","?","?","?","?","?","Poison"],
   ];
   const boardSize7x7_3 = [
-    ["?","?","?","?","Bomb","?","Red Cross"],
+    ["7-3","?","?","?","Bomb","?","Red Cross"],
     ["?","Poison","?","?","?","Bomb","?"],
     ["?","Bomb","?","Typhoon","?","?","?"],
     ["?","?","?","?","?","?","?"],
@@ -79,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Bomb","?","?","?","?","?","Poison"],
   ];
   const boardSize7x7_4 = [
-    ["?","?","?","?","Bomb","?","Red Cross"],
+    ["7-4","?","?","?","Bomb","?","Red Cross"],
     ["?","Poison","?","?","?","Bomb","?"],
     ["?","Bomb","?","Typhoon","?","?","?"],
     ["?","?","?","?","?","?","?"],
@@ -145,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Bomb","?","?","Bomb","?","?","?","Poison","?","?","?"],
   ];
   const boardSize11x11_2 = [
-    ["12","?","?","?","Bomb","?","Red Cross","?","?","Bomb","?"],
+    ["11-2","?","?","?","Bomb","?","Red Cross","?","?","Bomb","?"],
     ["?","Poison","?","?","?","Bomb","?","?","?","?","?"],
     ["?","Bomb","?","Typhoon","?","?","?","Typhoon","?","?","?"],
     ["?","?","?","Poison","?","?","?","Poison","?","?","?"],
@@ -158,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Bomb","?","?","Bomb","?","?","?","Poison","?","?","?"],
   ];
   const boardSize11x11_3 = [
-    ["13","?","?","?","Bomb","?","Red Cross","?","?","Bomb","?"],
+    ["11-3","?","?","?","Bomb","?","Red Cross","?","?","Bomb","?"],
     ["?","Poison","?","?","?","Bomb","?","?","?","?","?"],
     ["?","Bomb","?","Typhoon","?","?","?","Typhoon","?","?","?"],
     ["?","?","?","Poison","?","?","?","Poison","?","?","?"],
@@ -171,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Bomb","?","?","Bomb","?","?","?","Poison","?","?","?"],
   ];
   const boardSize11x11_4 = [
-    ["14","?","?","?","Bomb","?","Red Cross","?","?","Bomb","?"],
+    ["11-4","?","?","?","Bomb","?","Red Cross","?","?","Bomb","?"],
     ["?","Poison","?","?","?","Bomb","?","?","?","?","?"],
     ["?","Bomb","?","Typhoon","?","?","?","Typhoon","?","?","?"],
     ["?","?","?","Poison","?","?","?","Poison","?","?","?"],
@@ -331,28 +323,28 @@ document.addEventListener("DOMContentLoaded", () => {
     boardData = boardSize5x5;
     createBoard(5);
     document.getElementById("gameBoard").removeAttribute("game-board");
-    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+    document.getElementById("gameBoard").setAttribute("class", "game-board");
   });
   option2.addEventListener("click", () => {
     boardData = boardData5x5_2;
     createBoard(5);
     document.getElementById("gameBoard").removeAttribute("game-board");
-    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+    document.getElementById("gameBoard").setAttribute("class", "game-board");
   });
   option3.addEventListener("click", () => {
     boardData = boardData5x5_3;
     createBoard(5);
     document.getElementById("gameBoard").removeAttribute("game-board");
-    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+    document.getElementById("gameBoard").setAttribute("class", "game-board");
   });
   option4.addEventListener("click", () => {
     boardData = boardData5x5_4;
     createBoard(5);
     document.getElementById("gameBoard").removeAttribute("game-board");
-    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+    document.getElementById("gameBoard").setAttribute("class", "game-board");
   });
   option5.addEventListener("click", () => {
-    boardData = boardSize7x7_2;
+    boardData = boardSize7x7;
     createBoard(7);
     document.getElementById("gameBoard").removeAttribute("game-board");
     document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
@@ -363,42 +355,65 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("gameBoard").removeAttribute("game-board");
     document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
   });
-  option1.addEventListener("click", () => {
-    boardData = boardSize7x7_2;
+  option7.addEventListener("click", () => {
+    boardData = boardSize7x7_3;
     createBoard(7);
     document.getElementById("gameBoard").removeAttribute("game-board");
     document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
   });
-  option1.addEventListener("click", () => {
-    boardData = boardSize7x7_2;
+  option8.addEventListener("click", () => {
+    boardData = boardSize7x7_4;
     createBoard(7);
     document.getElementById("gameBoard").removeAttribute("game-board");
     document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
   });
-  option1.addEventListener("click", () => {
-    boardData = boardSize7x7_2;
-    createBoard(7);
+  option9.addEventListener("click", () => {
+    boardData = boardSize9x9;
+    createBoard(9);
     document.getElementById("gameBoard").removeAttribute("game-board");
-    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+    document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
   });
-  option1.addEventListener("click", () => {
-    boardData = boardSize7x7_2;
-    createBoard(7);
+  option10.addEventListener("click", () => {
+    boardData = boardSize9x9_2;
+    createBoard(9);
     document.getElementById("gameBoard").removeAttribute("game-board");
-    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+    document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
   });
-  option1.addEventListener("click", () => {
-    boardData = boardSize7x7_2;
-    createBoard(7);
+  option11.addEventListener("click", () => {
+    boardData = boardSize9x9_3;
+    createBoard(9);
     document.getElementById("gameBoard").removeAttribute("game-board");
-    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+    document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
   });
-  option1.addEventListener("click", () => {
-    boardData = boardSize7x7_2;
-    createBoard(7);
+  option12.addEventListener("click", () => {
+    boardData = boardSize9x9_4;
+    createBoard(9);
     document.getElementById("gameBoard").removeAttribute("game-board");
-    document.getElementById("gameBoard").setAttribute("class", "game-board7x7");
+    document.getElementById("gameBoard").setAttribute("class", "game-board9x9");
   });
-
+  option13.addEventListener("click", () => {
+    boardData = boardSize11x11;
+    createBoard(11);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
+  });
+  option14.addEventListener("click", () => {
+    boardData = boardSize11x11_2;
+    createBoard(11);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
+  });
+  option15.addEventListener("click", () => {
+    boardData = boardSize11x11_3;
+    createBoard(11);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
+  });
+  option16.addEventListener("click", () => {
+    boardData = boardSize11x11_4;
+    createBoard(11);
+    document.getElementById("gameBoard").removeAttribute("game-board");
+    document.getElementById("gameBoard").setAttribute("class", "game-board11x11");
+  });
 
 });
