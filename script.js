@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   // Game Board 1
   const boardSize5x5 = [
-    ["5", "?", "Bomb", "Red Cross", "?"],
+    ["?", "?", "Bomb", "Red Cross", "?"],
     ["Poison", "?", "?", "?", "Typhoon"],
     ["?", "Bomb", "Red Cross", "Poison", "?"],
     ["?", "?", "?", "Bomb", "Red Cross"],
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Game Board 2
   const boardData5x5_2 = [
-    ["5-2", "Bomb", "?", "Poison", "?"],
+    ["?", "Bomb", "?", "Poison", "?"],
     ["?", "?", "Red Cross", "?", "Bomb"],
     ["Poison", "?", "Typhoon", "?", "?"],
     ["?", "Red Cross", "?", "?", "?"],
