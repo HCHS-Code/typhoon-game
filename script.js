@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["?","?","Red Cross","?","Poison","?","Poison","?","Red Cross","?","Bomb"],
     ["?","Bomb","?","?","Bomb","?","?","Typhoon","?","?","?"],
     ["?","?","Poison","?","?","Red Cross","?","Poison","?","Red Cross","?"],
-    ["Bomb","?","","Bomb","?","Poison","Bomb","?","Bomb","?","?"],
+    ["Bomb","?","?","Bomb","?","Poison","Bomb","?","Bomb","?","?"],
     ["?","?","Poison","?","?","?","?","?","Typhoon","?","?"],
     ["Red Cross","?","Bomb","?","Poison","?","Bomb","?","Poison","?","?"],
     ["Bomb","?","?","?","Red Cross","?","?","Poison","?","?","?"],

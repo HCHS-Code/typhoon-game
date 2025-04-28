@@ -13,6 +13,12 @@ body {
   height: 420px;
   background-color: rgb(30, 118, 92);
 }
+.boardSizes{
+  visibility:hidden;
+}
+.boardData {
+  visibility:hidden;
+}
 .container {
   text-align: center;
 }
