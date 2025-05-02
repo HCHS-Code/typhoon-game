@@ -10,6 +10,22 @@
   </head>
 
   <body>
+    <div>
+      <nav class="site-header">
+        <button id="hamburger"><img id="hamburger-img" src="assets/images/hamburger-menu.png" alt="menu toggle icon"></button>
+      </nav>
+
+      <div id="nav-links">
+        <ul>
+          <li><img src="assets/images/hamburger_assets/game.png"><a href="index.html"> Game</a></li>
+          <hr>
+          <li><img src="assets/images/hamburger_assets/help.png"><a href="howToPlay.html"> How To Play</a></li>
+          <hr>
+          <li><img src="assets/images/hamburger_assets/credits.png"><a href="credits.html"> Credits</a></li>
+          <hr>
+        </ul>
+      </div>
+    </div>
 
       <label for="boardSelect" class="boardData">Select Game Board:</label>
       <select id="boardSelect" class="boardData">
@@ -27,6 +43,11 @@
        <option value="boardSize11x11">11x11</option>
      </select>
 
+    
+    <!-- Had to add "Game Container" class, wouldn't work without it (free to help me in comments) -->
+    <div class="game-container">
+      <div class="container">
+        <h1>Bomb/Typhoon Review Game</h1>
       <div>
         <button popovertarget="boardOptions">
           <Text>
@@ -154,28 +175,6 @@
         </View>
       </div>
 
-    <div>
-      <nav class="site-header">
-        <button id="hamburger"><img id="hamburger-img" src="assets/images/hamburger-menu.png" alt="menu toggle icon"></button>
-      </nav>
-
-      <div id="nav-links">
-        <ul>
-          <li><img src="assets/images/hamburger_assets/game.png"><a href="index.html"> Game</a></li>
-          <hr>
-          <li><img src="assets/images/hamburger_assets/help.png"><a href="howToPlay.html"> How To Play</a></li>
-          <hr>
-          <li><img src="assets/images/hamburger_assets/credits.png"><a href="credits.html"> Credits</a></li>
-          <hr>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Had to add "Game Container" class, wouldn't work without it (free to help me in comments) -->
-    <div class="game-container">
-      <div class="container">
-        <h1>Bomb/Typhoon Review Game</h1>
-  
         <label for="boardSelect">Select Game Board:</label>
         <select id="boardSelect">
           <option value="boardData1">Board 1</option>
