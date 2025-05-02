@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bomb/Typhoon Game</title>
+    <title>Bomb/Typhoon Review Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/hamburgerMenu/hamburger.css" />
+    <link rel="stylesheet" href="assets/css/hamburgerMenu/_hamburger.css" />
   </head>
 
   <body>
-    <div class="container">
-      <h1>Bomb/Typhoon Review Game</h1>
 
       <label for="boardSelect" class="boardData">Select Game Board:</label>
       <select id="boardSelect" class="boardData">
@@ -154,10 +154,63 @@
         </View>
       </div>
 
-      <div class="game-board" id="gameBoard">
-        <!-- Game board cells will be generated here -->
+    <div>
+      <nav class="site-header">
+        <button id="hamburger"><img id="hamburger-img" src="assets/images/hamburger-menu.png" alt="menu toggle icon"></button>
+      </nav>
+
+      <div id="nav-links">
+        <ul>
+          <li><img src="assets/images/hamburger_assets/game.png"><a href="index.html"> Game</a></li>
+          <hr>
+          <li><img src="assets/images/hamburger_assets/help.png"><a href="howToPlay.html"> How To Play</a></li>
+          <hr>
+          <li><img src="assets/images/hamburger_assets/credits.png"><a href="credits.html"> Credits</a></li>
+          <hr>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Had to add "Game Container" class, wouldn't work without it (free to help me in comments) -->
+    <div class="game-container">
+      <div class="container">
+        <h1>Bomb/Typhoon Review Game</h1>
+  
+        <label for="boardSelect">Select Game Board:</label>
+        <select id="boardSelect">
+          <option value="boardData1">Board 1</option>
+          <option value="boardData2">Board 2</option>
+          <option value="boardData3">Board 3</option>
+          <option value="boardData4">Board 4</option>
+        </select>
+  
+        <div class="game-board" id="gameBoard">
+          <!-- Game board cells will be generated here -->
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="burger.js"></script>
+    <div class="bug-report">
+      <button popovertarget="warning1" id="openWarning" class="reportBtn" >
+        <img src="assets/images/bug.png">
+      </button>
+      <div class="warning" id="warning1" popover>
+        <h1>Report A Bug!</h1>
+        <p>Click continue to be relocated to the bug report page.</p>
+        <h3>Warning!</h3>
+        <p>A GitHub account may be needed.</p>
+        <button popovertarget="warning1" type="submit" class="cancelBtn">Cancel</button>
+        <a href="https://github.com/HCHS-Code/typhoon-game/issues/new/choose">
+          <button type="submit" class="continueBtn">Continue</button>
+        </a>
+      </div>
+    </div>
+
+    
+    </script>
+
+  
+    
   </body>
 </html>
