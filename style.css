@@ -11,8 +11,28 @@ body {
   margin: 0;
 }
 
+.boardOptions {
+  width: 660px;
+  height: 420px;
+  background-color: rgb(30, 118, 92);
+}
+.boardSizes{
+  visibility:hidden;
+}
+.boardData {
+  visibility:hidden;
+}
 .container {
   text-align: center;
+}
+
+.titleHolder{
+  flex-direction: row;
+  width: 660px;
+}
+
+.popTextOptions{
+  color: rgb(225, 148, 6)
 }
 
 .helpContainer {
@@ -26,6 +46,29 @@ body {
   grid-gap: 5px;
   margin-top: 20px;
 }
+
+.game-board7x7 {
+  display: grid;
+  grid-template-columns: repeat(7, 80px);
+  grid-gap: 5px;
+  margin-top: 20px;
+}
+
+.game-board9x9 {
+  display: grid;
+  grid-template-columns: repeat(9, 80px);
+  grid-gap: 5px;
+  margin-top: 20px;
+}
+
+.game-board11x11 {
+  display: grid;
+  grid-template-columns: repeat(11, 80px);
+  grid-gap: 5px;
+  margin-top: 20px;
+}
+
+
 
 .cell {
   width: 80px;
