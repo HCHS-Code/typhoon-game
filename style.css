@@ -270,6 +270,107 @@ body {
   animation-fill-mode: forwards;
 }
 
+//Notebook below
+
+/* The Overlay (background) */
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.notebook {
+  font-size: 100px;
+}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 35%;
+  margin-left: 30.5%;
+  
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.team-input-container {
+  display: flex;
+  width: 35%;
+  margin-left: 30.5%;
+  
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: black;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  overflow: auto;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+//Bug-report below
+
 .bug-report {
   padding-top:10vh;
 }
@@ -326,3 +427,4 @@ img{
   border-radius: 4px;
   cursor: pointer;
 }
+

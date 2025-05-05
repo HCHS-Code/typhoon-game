@@ -186,8 +186,48 @@
         <div class="game-board" id="gameBoard">
           <!-- Game board cells will be generated here -->
         </div>
+        
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <h2>Notebook</h2>
+            <div class="team-input-container">
+              
+              <i class="fa fa-user icon">Team 1</i>
+              <input class="input-field" type="text" placeholder="Team Name" name="team1">
+                
+              <i class="fa fa-user icon">Team 2</i>
+              <input class="input-field" type="text" placeholder="Team Name" name="team2">
+              
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-envelope icon">P</i>
+              <input class="input-field" type="text" placeholder="Poisoned Players" name="email">
+
+              <i class="fa fa-envelope icon">P</i>
+              <input class="input-field" type="text" placeholder="Poisoned Players" name="email">
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-key icon">RC</i>
+              <input class="input-field" type="number" placeholder="# of Red Crosses" name="psw">
+
+              <i class="fa fa-key icon">RC</i>
+              <input class="input-field" type="number" placeholder="# of Red Crosses" name="psw">
+            </div>
+
+          </div>
+        </div>
+        <span style="cursor:pointer;flex-direction: column;" onclick="openNav()">
+          
+          <img src="assets/images/sketchbook.png" alt="sketchbook icon" style="width: 120; height: 120px;">
+        </span>
+        
+        
       </div>
     </div>
+    <script src="overlay.js"></script>
     <script src="script.js"></script>
     <script src="burger.js"></script>
     <div class="bug-report">
