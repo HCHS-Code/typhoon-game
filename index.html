@@ -49,13 +49,20 @@
       <div class="container">
         <h1>Bomb/Typhoon Review Game</h1>
       <div>
+          <label for="boardOptions">Select Board Size:</label>
         <button popovertarget="boardOptions">
           <Text>
             Board Options
           </Text>
         </button>
+        <label for="boardStyle">Select BoardStyle:</label>
+        <select id="boardStyle">
+          <option value="Normal">Normal</option>
+          <option value="Dark">Dark</option>
+          <option value="Teal">Teal</option>
+          <option value="Orange">Orange</option>
+        </select>
       </div>
-
       <div id="boardOptions" class="boardOptions" popover>
         <View class="mainPScreen">
           <h1 id="popTextOptions">GameBoard Options</h1>
