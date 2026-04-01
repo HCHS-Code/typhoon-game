@@ -48,9 +48,10 @@
     <div class="game-container">
       <div class="container">
         <h1>Bomb/Typhoon Review Game</h1>
+
       <div>
           <label for="boardOptions">Select Board Size:</label>
-        <button popovertarget="boardOptions">
+        <button onclick="document.getElementById('container').id = 'test';" popovertarget="boardOptions">
           <Text>
             Board Options
           </Text>
@@ -63,6 +64,7 @@
           <option value="Orange">Orange</option>
         </select>
       </div>
+
       <div id="boardOptions" class="boardOptions" popover>
         <View class="mainPScreen">
           <h1 id="popTextOptions">GameBoard Options</h1>
