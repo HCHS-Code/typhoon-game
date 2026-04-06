@@ -1,9 +1,6 @@
-body {
+.body {
     font-family: sans-serif;
     background-color: #f0f0f0;
-}
-test {
-    color: yellow;
 }
 .game-container {
     display: flex;
@@ -11,13 +8,10 @@ test {
     align-items: center;
     min-height: 70vh;
     margin: 0;
-    background-color: rgb(30, 118, 92);
 }
-
 .boardOptions {
     width: 660px;
     height: 420px;
-    background-color: rgb(0, 80, 80);
 }
 .boardSizes {
     visibility: hidden;
@@ -27,7 +21,6 @@ test {
 }
 .container {
     text-align: center;
-    background-color: rgb(30, 118, 0);
 }
 
 .titleHolder {
@@ -325,4 +318,25 @@ img {
     font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
+}
+.style {
+    border-radius: 6px;
+}
+/* Beginning of Different Styles */
+/* Dark Mode */
+.body-dark {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+.game-container-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0;
+    background-color: black;
+}
+.container-dark {
+    text-align: center;
 }
