@@ -628,9 +628,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("style").removeAttribute("game-container");
     document
       .getElementById("style")
-      .setAttribute("class", "game-container-dark");
-    document.getElementById("body").setAttribute("id", "body-dark");
+      .setAttribute("class", "game-container-" + boardStyle.value);
+    document.getElementByTagName("body").removeAttribute("body");
+    document
+      .getElementByTagName("body")
+      .setAttribute("id", "body-" + boardStyle.value);
   });
+
   option1.addEventListener("click", () => {
     boardData = boardSize5x5;
     createBoard(5);

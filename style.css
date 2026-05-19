@@ -2,12 +2,13 @@
     font-family: sans-serif;
     background-color: #f0f0f0;
 }
-.game-container {
+.game-container-Normal {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 70vh;
     margin: 0;
+    background-color: green;
 }
 .boardOptions {
     width: 660px;
@@ -324,12 +325,12 @@ img {
 }
 /* Beginning of Different Styles */
 /* Dark Mode */
-.body-dark {
+.body-Dark {
     font-family: sans-serif;
     background-color: black;
     color: white;
 }
-.game-container-dark {
+.game-container-Dark {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -337,6 +338,41 @@ img {
     margin: 0;
     background-color: black;
 }
-.container-dark {
+.container-Dark {
+    text-align: center;
+}
+/* Teal mode */
+.body-Teal {
+    font-family: sans-serif;
+    background-color: Teal;
+    color: white;
+}
+.game-container-Teal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0;
+    background-color: Teal;
+}
+.container-Teal {
+    text-align: center;
+}
+/* Orange mode*/
+.body-Orange {
+    font-family: sans-serif;
+    background-color: orangered;
+    color: white;
+}
+.game-container-Orange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0;
+    color: #600080;
+    background-color: #ff6933;
+}
+.container-Orange {
     text-align: center;
 }
