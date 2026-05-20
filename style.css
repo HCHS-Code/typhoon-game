@@ -1,6 +1,6 @@
-.body {
+.body-Normal {
     font-family: sans-serif;
-    background-color: #f0f0f0;
+    background-color: #445454;
 }
 #Normal {
     font-family: sans-serif;
@@ -345,7 +345,7 @@ img {
     text-align: center;
 }
 /* Teal mode */
-#Teal {
+.body-Teal {
     font-family: sans-serif;
     background-color: Teal;
 }
@@ -361,7 +361,7 @@ img {
     text-align: center;
 }
 /* Orange mode*/
-#Orange {
+.body-Orange {
     font-family: sans-serif;
     background-color: orangered;
 }

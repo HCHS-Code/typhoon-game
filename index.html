@@ -1,216 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bomb/Typhoon Review Game</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="assets/css/hamburgerMenu/hamburger.css" />
-    <link rel="stylesheet" href="assets/css/hamburgerMenu/_hamburger.css" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bomb/Typhoon Review Game</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="assets/css/hamburgerMenu/hamburger.css" />
+        <link rel="stylesheet" href="assets/css/hamburgerMenu/_hamburger.css" />
+    </head>
 
-  <body id="Normal" class="body">
-    <div>
-      <nav class="site-header">
-        <button id="hamburger"><img id="hamburger-img" src="assets/images/hamburger-menu.png" alt="menu toggle icon"></button>
-      </nav>
+    <body id="Normal" class="body-Dark">
+        <div>
+            <nav class="site-header">
+                <button id="hamburger">
+                    <img
+                        id="hamburger-img"
+                        src="assets/images/hamburger-menu.png"
+                        alt="menu toggle icon"
+                    />
+                </button>
+            </nav>
 
-      <div id="nav-links">
-        <ul>
-          <li><img src="assets/images/hamburger_assets/game.png"><a href="index.html"> Game</a></li>
-          <hr>
-          <li><img src="assets/images/hamburger_assets/help.png"><a href="howToPlay.html"> How To Play</a></li>
-          <hr>
-          <li><img src="assets/images/hamburger_assets/credits.png"><a href="credits.html"> Credits</a></li>
-          <hr>
-        </ul>
-      </div>
-    </div>
-
-      <label for="boardSelect" class="boardData">Select Game Board:</label>
-      <select id="boardSelect" class="boardData">
-        <option value="boardData1">Board 1</option>
-        <option value="boardData2">Board 2</option>
-        <option value="boardData3">Board 3</option>
-        <option value="boardData4">Board 4</option>
-      </select>
-
-      <label for="sizeSelect" class="boardSizes">Select Game Board Size:</label>
-     <select id="sizeSelect" class="boardSizes">
-       <option value="boardSize5x5">5x5</option>
-       <option value="boardSize7x7">7x7</option>
-       <option value="boardSize9x9">9x9</option>
-       <option value="boardSize11x11">11x11</option>
-     </select>
-
-
-    <!-- Had to add "Game Container" class, wouldn't work without it (free to help me in comments) -->
-    <div id="style" class="game-container-Normal">
-      <div class="container">
-        <h1>Bomb/Typhoon Review Game</h1>
-
-      <div>
-          <label for="boardOptions">Select Board Size:</label>
-        <button popovertarget="boardOptions">
-          <Text>
-            Board Options
-          </Text>
-        </button>
-        <label for="boardStyle">Select BoardStyle:</label>
-        <select id="boardStyle">
-          <option value="Normal">Normal</option>
-          <option value="Dark">Dark</option>
-          <option value="Teal">Teal</option>
-          <option value="Orange">Orange</option>
-        </select>
-      </div>
-
-      <div id="boardOptions" class="boardOptions" popover>
-        <View class="mainPScreen">
-          <h1 id="popTextOptions">GameBoard Options</h1>
-          <View class="titleHolder">
-            <div>
-              <h2 id="popTextOptions">5x5 Boards</h2>
+            <div id="nav-links">
+                <ul>
+                    <li>
+                        <img src="assets/images/hamburger_assets/game.png" /><a
+                            href="index.html"
+                        >
+                            Game</a
+                        >
+                    </li>
+                    <hr />
+                    <li>
+                        <img src="assets/images/hamburger_assets/help.png" /><a
+                            href="howToPlay.html"
+                        >
+                            How To Play</a
+                        >
+                    </li>
+                    <hr />
+                    <li>
+                        <img
+                            src="assets/images/hamburger_assets/credits.png"
+                        /><a href="credits.html"> Credits</a>
+                    </li>
+                    <hr />
+                </ul>
             </div>
-              <button type="button" id="option1">
-                <Text>
-                  Board 1
-                </Text>
-              </button>
-
-              <button type="button" id="option2">
-                <Text>
-                  Board 2
-                </Text>
-              </button>
-
-              <button type="button" id="option3">
-                <Text>
-                  Board 3
-                </Text>
-              </button>
-
-              <button type="button" id="option4">
-                <Text>
-                  Board 4
-                </Text>
-              </button>
-
-              <div>
-              <h2 id="popTextOptions">7x7 Boards</h2>
-              </div>
-
-              <button type="button" id="option5">
-                <Text>
-                  Board 1
-                </Text>
-              </button>
-
-              <button type="button" id="option6">
-                <Text>
-                  Board 2
-                </Text>
-              </button>
-
-              <button type="button" id="option7">
-                <Text>
-                  Board 3
-                </Text>
-              </button>
-
-              <button type="button" id="option8">
-                <Text>
-                  Board 4
-                </Text>
-              </button>
-
-              <div>
-              <h2 id="popTextOptions">9x9 Boards</h2>
-              </div>
-
-              <button type="button" id="option9">
-                <Text>
-                  Board 1
-                </Text>
-              </button>
-
-              <button type="button" id="option10">
-                <Text>
-                  Board 2
-                </Text>
-              </button>
-
-              <button type="button" id="option11">
-                <Text>
-                  Board 3
-                </Text>
-              </button>
-
-              <button type="button" id="option12">
-                <Text>
-                  Board 4
-                </Text>
-              </button>
-
-              <div>
-              <h2 id="popTextOptions">11x11 Boards</h2>
-              </div>
-
-              <button type="button" id="option13">
-                <Text>
-                  Board 1
-                </Text>
-              </button>
-
-              <button type="button" id="option14">
-                <Text>
-                  Board 2
-                </Text>
-              </button>
-
-              <button type="button" id="option15">
-                <Text>
-                  Board 3
-                </Text>
-              </button>
-
-              <button type="button" id="option16">
-                <Text>
-                  Board 4
-                </Text>
-              </button>
-
-          </View>
-        </View>
-      </div>
-
-        <div class="game-board" id="gameBoard">
-          <!-- Game board cells will be generated here -->
         </div>
-      </div>
-    </div>
-    <script src="script.js"></script>
-    <script src="burger.js"></script>
-    <div class="bug-report">
-      <button popovertarget="warning1" id="openWarning" class="reportBtn" >
-        <img src="assets/images/bug.png">
-      </button>
-      <div class="warning" id="warning1" popover>
-        <h1>Report A Bug!</h1>
-        <p>Click continue to be relocated to the bug report page.</p>
-        <h3>Warning!</h3>
-        <p>A GitHub account may be needed.</p>
-        <button popovertarget="warning1" type="submit" class="cancelBtn">Cancel</button>
-        <a href="https://github.com/HCHS-Code/typhoon-game/issues/new/choose">
-          <button type="submit" class="continueBtn">Continue</button>
-        </a>
-      </div>
-    </div>
 
+        <label for="boardSelect" class="boardData">Select Game Board:</label>
+        <select id="boardSelect" class="boardData">
+            <option value="boardData1">Board 1</option>
+            <option value="boardData2">Board 2</option>
+            <option value="boardData3">Board 3</option>
+            <option value="boardData4">Board 4</option>
+        </select>
 
-    </script>
+        <label for="sizeSelect" class="boardSizes"
+            >Select Game Board Size:</label
+        >
+        <select id="sizeSelect" class="boardSizes">
+            <option value="boardSize5x5">5x5</option>
+            <option value="boardSize7x7">7x7</option>
+            <option value="boardSize9x9">9x9</option>
+            <option value="boardSize11x11">11x11</option>
+        </select>
 
+        <!-- Had to add "Game Container" class, wouldn't work without it (free to help me in comments) -->
+        <div id="style" class="game-container-Normal">
+            <div class="container">
+                <h1>Bomb/Typhoon Review Game</h1>
 
+                <div>
+                    <label for="boardOptions">Select Board Size:</label>
+                    <button popovertarget="boardOptions">
+                        <Text> Board Options </Text>
+                    </button>
+                    <label for="boardStyle">Select BoardStyle:</label>
+                    <select id="boardStyle">
+                        <option value="Normal">Normal</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Teal">Teal</option>
+                        <option value="Orange">Orange</option>
+                    </select>
+                </div>
 
-  </body>
+                <div id="boardOptions" class="boardOptions" popover>
+                    <View class="mainPScreen">
+                        <h1 id="popTextOptions">GameBoard Options</h1>
+                        <View class="titleHolder">
+                            <div>
+                                <h2 id="popTextOptions">5x5 Boards</h2>
+                            </div>
+                            <button type="button" id="option1">
+                                <Text> Board 1 </Text>
+                            </button>
+
+                            <button type="button" id="option2">
+                                <Text> Board 2 </Text>
+                            </button>
+
+                            <button type="button" id="option3">
+                                <Text> Board 3 </Text>
+                            </button>
+
+                            <button type="button" id="option4">
+                                <Text> Board 4 </Text>
+                            </button>
+
+                            <div>
+                                <h2 id="popTextOptions">7x7 Boards</h2>
+                            </div>
+
+                            <button type="button" id="option5">
+                                <Text> Board 1 </Text>
+                            </button>
+
+                            <button type="button" id="option6">
+                                <Text> Board 2 </Text>
+                            </button>
+
+                            <button type="button" id="option7">
+                                <Text> Board 3 </Text>
+                            </button>
+
+                            <button type="button" id="option8">
+                                <Text> Board 4 </Text>
+                            </button>
+
+                            <div>
+                                <h2 id="popTextOptions">9x9 Boards</h2>
+                            </div>
+
+                            <button type="button" id="option9">
+                                <Text> Board 1 </Text>
+                            </button>
+
+                            <button type="button" id="option10">
+                                <Text> Board 2 </Text>
+                            </button>
+
+                            <button type="button" id="option11">
+                                <Text> Board 3 </Text>
+                            </button>
+
+                            <button type="button" id="option12">
+                                <Text> Board 4 </Text>
+                            </button>
+
+                            <div>
+                                <h2 id="popTextOptions">11x11 Boards</h2>
+                            </div>
+
+                            <button type="button" id="option13">
+                                <Text> Board 1 </Text>
+                            </button>
+
+                            <button type="button" id="option14">
+                                <Text> Board 2 </Text>
+                            </button>
+
+                            <button type="button" id="option15">
+                                <Text> Board 3 </Text>
+                            </button>
+
+                            <button type="button" id="option16">
+                                <Text> Board 4 </Text>
+                            </button>
+                        </View>
+                    </View>
+                </div>
+
+                <div class="game-board" id="gameBoard">
+                    <!-- Game board cells will be generated here -->
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="burger.js"></script>
+        <div class="bug-report">
+            <button popovertarget="warning1" id="openWarning" class="reportBtn">
+                <img src="assets/images/bug.png" />
+            </button>
+            <div class="warning" id="warning1" popover>
+                <h1>Report A Bug!</h1>
+                <p>Click continue to be relocated to the bug report page.</p>
+                <h3>Warning!</h3>
+                <p>A GitHub account may be needed.</p>
+                <button
+                    popovertarget="warning1"
+                    type="submit"
+                    class="cancelBtn"
+                >
+                    Cancel
+                </button>
+                <a
+                    href="https://github.com/HCHS-Code/typhoon-game/issues/new/choose"
+                >
+                    <button type="submit" class="continueBtn">Continue</button>
+                </a>
+            </div>
+        </div>
+    </body>
 </html>

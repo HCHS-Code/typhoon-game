@@ -629,10 +629,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document
       .getElementById("style")
       .setAttribute("class", "game-container-" + boardStyle.value);
-    document.getElementById("body").removeAttribute("Normal");
+    document.getElementById("Normal").removeAttribute("body-Normal");
     document
-      .getElementById("body")
-      .setAttribute("id", "body-" + boardStyle.value);
+      .getElementById("Normal")
+      .setAttribute("class", "body-" + boardStyle.value);
   });
 
   option1.addEventListener("click", () => {
