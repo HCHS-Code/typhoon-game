@@ -2,6 +2,9 @@
     font-family: sans-serif;
     background-color: #f0f0f0;
 }
+#Normal {
+    font-family: sans-serif;
+}
 .game-container-Normal {
     display: flex;
     justify-content: center;
@@ -342,10 +345,9 @@ img {
     text-align: center;
 }
 /* Teal mode */
-.body-Teal {
+#Teal {
     font-family: sans-serif;
     background-color: Teal;
-    color: white;
 }
 .game-container-Teal {
     display: flex;
@@ -359,10 +361,9 @@ img {
     text-align: center;
 }
 /* Orange mode*/
-.body-Orange {
+#Orange {
     font-family: sans-serif;
     background-color: orangered;
-    color: white;
 }
 .game-container-Orange {
     display: flex;

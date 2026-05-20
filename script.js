@@ -629,9 +629,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document
       .getElementById("style")
       .setAttribute("class", "game-container-" + boardStyle.value);
-    document.getElementByTagName("body").removeAttribute("body");
+    document.getElementById("body").removeAttribute("Normal");
     document
-      .getElementByTagName("body")
+      .getElementById("body")
       .setAttribute("id", "body-" + boardStyle.value);
   });
 
