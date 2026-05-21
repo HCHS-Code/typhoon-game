@@ -344,6 +344,18 @@ img {
 .container-Dark {
     text-align: center;
 }
+.cell-Dark {
+    width: 80px;
+    height: 80px;
+    background-color: grey;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
 /* Teal mode */
 .body-Teal {
     font-family: sans-serif;
@@ -359,6 +371,18 @@ img {
 }
 .container-Teal {
     text-align: center;
+}
+.cell-Teal {
+    width: 80px;
+    height: 80px;
+    background-color: #439775;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
 }
 /* Orange mode*/
 .body-Orange {
@@ -376,4 +400,16 @@ img {
 }
 .container-Orange {
     text-align: center;
+}
+.cell-Orange {
+    width: 80px;
+    height: 80px;
+    background-color: #FF6933;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
 }

@@ -633,6 +633,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("B").setAttribute("class", "site-header-" + boardStyle.value);
     document.getElementById("A").removeAttribute("hamburger-img-Normal");
     document.getElementById("A").setAttribute("class", "hamburger-img-" + boardStyle.value);
+    /*if(boardStyle.value.equals("Normal")){
+      document.getElementsByClassName("cell").style.background-color = "Blue";
+    }else if(boardStyle.value.equals("Dark")){
+      document.getElementsByClassName("cell").style.background-color = "Orange";
+    }else if(boardStyle.value.equals("Teal")){
+      document.getElementsByClassName("cell").style.background-color = "Yellow";
+    }else if(boardStyle.value.equals("Orange")){
+      document.getElementsByClassName("cell").style.background-color = "Purple";
+      }*/
   });
 
   option1.addEventListener("click", () => {

@@ -115,7 +115,7 @@
 .hamburger-img-Teal {
     height: 40px;
     width: 40px;
-    background-color: Orange;
+    filter: brightness(0);
 }
 .site-header-Orange {
     padding-left: 1%;
@@ -126,5 +126,5 @@
 .hamburger-img-Orange {
     height: 40px;
     width: 40px;
-    background-color: Purple;
+    filter: brightness(0);
 }
