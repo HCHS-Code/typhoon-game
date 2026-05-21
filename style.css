@@ -272,8 +272,8 @@
     padding-top: 10vh;
 }
 
-.reportBtn {
-    background-color: #ffffff;
+.reportBtn-Normal {
+    background-color: white;
     border: 0;
     outline: none;
     cursor: pointer;
@@ -341,8 +341,14 @@ img {
     margin: 0;
     background-color: black;
 }
-.container-Dark {
-    text-align: center;
+.reportBtn-Dark {
+    background-color: #600080;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 2px;
 }
 .cell-Dark {
     width: 80px;
@@ -355,6 +361,9 @@ img {
     font-size: 24px;
     cursor: pointer;
     user-select: none;
+}
+.cell-Dark:hover {
+    background-color: #eee;
 }
 /* Teal mode */
 .body-Teal {
@@ -369,8 +378,14 @@ img {
     margin: 0;
     background-color: Teal;
 }
-.container-Teal {
-    text-align: center;
+.reportBtn-Teal {
+    background-color: Teal;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 2px;
 }
 .cell-Teal {
     width: 80px;
@@ -383,6 +398,9 @@ img {
     font-size: 24px;
     cursor: pointer;
     user-select: none;
+}
+.cell-Teal:hover {
+    background-color: #eee;
 }
 /* Orange mode*/
 .body-Orange {
@@ -398,8 +416,14 @@ img {
     color: #600080;
     background-color: #ff6933;
 }
-.container-Orange {
-    text-align: center;
+.reportBtn-Orange {
+    background-color: #ff6933;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 2px;
 }
 .cell-Orange {
     width: 80px;
@@ -412,4 +436,7 @@ img {
     font-size: 24px;
     cursor: pointer;
     user-select: none;
+}
+.cell-Orange:hover {
+    background-color: #eee;
 }

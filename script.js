@@ -502,7 +502,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cell.classList.add("cell");
         cell.dataset.row = row;
         cell.dataset.col = col;
-        cell.id = "C";
         cell.addEventListener("click", handleCellClick);
         gameBoard.appendChild(cell);
       }
@@ -642,6 +641,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document
       .getElementById("A")
       .setAttribute("class", "hamburger-img-" + boardStyle.value);
+    document.getElementById("openWarning").removeAttribute("reportBtn-Normal");
+    document
+      .getElementById("openWarning")
+      .setAttribute("class", "reportBtn-" + boardStyle.value);
     const cells = document.getElementsByClassName("cell");
     if (boardStyle.value == "Normal") {
       for (var i = 0; i < cells.length; i++) {
@@ -649,19 +652,19 @@ document.addEventListener("DOMContentLoaded", () => {
         cells[i].setAttribute("class", "cell");
       }
     } else if (boardStyle.value == "Dark") {
-      for (var i = 0; i < cells.length; i++) {
-        cells[i].removeAttribute("cell-" + boardStyle.value);
-        cells[i].setAttribute("class", "cell-" + boardStyle.value);
+      for (var j = 0; j < cells.length; j++) {
+        cells[j].removeAttribute("cell-" + boardStyle.value);
+        cells[j].setAttribute("class", "cell-" + boardStyle.value);
       }
     } else if (boardStyle.value == "Teal") {
-      for (var i = 0; i < cells.length; i++) {
-        cells[i].removeAttribute("cell-" + boardStyle.value);
-        cells[i].setAttribute("class", "cell-" + boardStyle.value);
+      for (var k = 0; k < cells.length; k++) {
+        cells[k].removeAttribute("cell-" + boardStyle.value);
+        cells[k].setAttribute("class", "cell-" + boardStyle.value);
       }
     } else if (boardStyle.value == "Orange") {
-      for (var i = 0; i < cells.length; i++) {
-        cells[i].removeAttribute("cell-" + boardStyle.value);
-        cells[i].setAttribute("class", "cell-" + boardStyle.value);
+      for (var l = 0; l < cells.length; l++) {
+        cells[l].removeAttribute("cell-" + boardStyle.value);
+        cells[l].setAttribute("class", "cell-" + boardStyle.value);
       }
     }
   });
