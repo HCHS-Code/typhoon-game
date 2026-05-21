@@ -1,6 +1,6 @@
 .body-Normal {
     font-family: sans-serif;
-    background-color: #445454;
+    background-color: white;
 }
 #Normal {
     font-family: sans-serif;
@@ -11,7 +11,7 @@
     align-items: center;
     min-height: 70vh;
     margin: 0;
-    background-color: green;
+    background-color: white;
 }
 .boardOptions {
     width: 660px;
@@ -363,7 +363,7 @@ img {
 /* Orange mode*/
 .body-Orange {
     font-family: sans-serif;
-    background-color: orangered;
+    background-color: #ff6933;
 }
 .game-container-Orange {
     display: flex;

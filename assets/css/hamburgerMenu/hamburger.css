@@ -1,8 +1,8 @@
-.site-header {
+.site-header-Normal {
     padding-left: 1%;
     min-height: 8vh;
     align-content: center;
-    background-color: yellow;
+    background-color: white;
 }
 
 #hamburger {
@@ -31,7 +31,7 @@
     transform: scale(0.9);
 }
 
-#hamburger-img {
+.hamburger-img-Normal {
     height: 40px;
     width: 40px;
     filter: brightness(0);
@@ -92,4 +92,39 @@
 
         background-color: rgb(235, 235, 235);
     }
+}
+
+/* Class Styles */
+.site-header-Dark {
+    padding-left: 1%;
+    min-height: 8vh;
+    align-content: center;
+    background-color: Black;
+}
+.hamburger-img-Dark {
+    height: 40px;
+    width: 40px;
+    filter: brightness(1);
+}
+.site-header-Teal {
+    padding-left: 1%;
+    min-height: 8vh;
+    align-content: center;
+    background-color: Teal;
+}
+.hamburger-img-Teal {
+    height: 40px;
+    width: 40px;
+    background-color: Orange;
+}
+.site-header-Orange {
+    padding-left: 1%;
+    min-height: 8vh;
+    align-content: center;
+    background-color: #ff6933;
+}
+.hamburger-img-Orange {
+    height: 40px;
+    width: 40px;
+    background-color: Purple;
 }

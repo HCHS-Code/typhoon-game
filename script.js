@@ -626,13 +626,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   boardStyle.addEventListener("change", () => {
     document.getElementById("style").removeAttribute("game-container");
-    document
-      .getElementById("style")
-      .setAttribute("class", "game-container-" + boardStyle.value);
+    document.getElementById("style").setAttribute("class", "game-container-" + boardStyle.value);
     document.getElementById("Normal").removeAttribute("body-Normal");
-    document
-      .getElementById("Normal")
-      .setAttribute("class", "body-" + boardStyle.value);
+    document.getElementById("Normal").setAttribute("class", "body-" + boardStyle.value);
+    document.getElementById("B").removeAttribute("site-header-Normal");
+    document.getElementById("B").setAttribute("class", "site-header-" + boardStyle.value);
+    document.getElementById("A").removeAttribute("hamburger-img-Normal");
+    document.getElementById("A").setAttribute("class", "hamburger-img-" + boardStyle.value);
   });
 
   option1.addEventListener("click", () => {
