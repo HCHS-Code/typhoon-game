@@ -502,6 +502,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cell.classList.add("cell");
         cell.dataset.row = row;
         cell.dataset.col = col;
+        cell.id = "C";
         cell.addEventListener("click", handleCellClick);
         gameBoard.appendChild(cell);
       }
@@ -626,22 +627,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   boardStyle.addEventListener("change", () => {
     document.getElementById("style").removeAttribute("game-container");
-    document.getElementById("style").setAttribute("class", "game-container-" + boardStyle.value);
+    document
+      .getElementById("style")
+      .setAttribute("class", "game-container-" + boardStyle.value);
     document.getElementById("Normal").removeAttribute("body-Normal");
-    document.getElementById("Normal").setAttribute("class", "body-" + boardStyle.value);
+    document
+      .getElementById("Normal")
+      .setAttribute("class", "body-" + boardStyle.value);
     document.getElementById("B").removeAttribute("site-header-Normal");
-    document.getElementById("B").setAttribute("class", "site-header-" + boardStyle.value);
+    document
+      .getElementById("B")
+      .setAttribute("class", "site-header-" + boardStyle.value);
     document.getElementById("A").removeAttribute("hamburger-img-Normal");
-    document.getElementById("A").setAttribute("class", "hamburger-img-" + boardStyle.value);
-    /*if(boardStyle.value.equals("Normal")){
-      document.getElementsByClassName("cell").style.background-color = "Blue";
-    }else if(boardStyle.value.equals("Dark")){
-      document.getElementsByClassName("cell").style.background-color = "Orange";
-    }else if(boardStyle.value.equals("Teal")){
-      document.getElementsByClassName("cell").style.background-color = "Yellow";
-    }else if(boardStyle.value.equals("Orange")){
-      document.getElementsByClassName("cell").style.background-color = "Purple";
-      }*/
+    document
+      .getElementById("A")
+      .setAttribute("class", "hamburger-img-" + boardStyle.value);
+    const cells = document.getElementsByClassName("cell");
+    if (boardStyle.value == "Normal") {
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].removeAttribute("cell-" + boardStyle.value);
+        cells[i].setAttribute("class", "cell");
+      }
+    } else if (boardStyle.value == "Dark") {
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].removeAttribute("cell-" + boardStyle.value);
+        cells[i].setAttribute("class", "cell-" + boardStyle.value);
+      }
+    } else if (boardStyle.value == "Teal") {
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].removeAttribute("cell-" + boardStyle.value);
+        cells[i].setAttribute("class", "cell-" + boardStyle.value);
+      }
+    } else if (boardStyle.value == "Orange") {
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].removeAttribute("cell-" + boardStyle.value);
+        cells[i].setAttribute("class", "cell-" + boardStyle.value);
+      }
+    }
   });
 
   option1.addEventListener("click", () => {

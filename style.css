@@ -72,7 +72,7 @@
 .cell {
     width: 80px;
     height: 80px;
-    background-color: #ddd;
+    background-color: black;
     border: 1px solid #ccc;
     display: flex;
     justify-content: center;
@@ -404,7 +404,7 @@ img {
 .cell-Orange {
     width: 80px;
     height: 80px;
-    background-color: #FF6933;
+    background-color: #ff6933;
     border: 1px solid #ccc;
     display: flex;
     justify-content: center;
