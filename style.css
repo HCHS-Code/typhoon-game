@@ -13,9 +13,10 @@
     margin: 0;
     background-color: white;
 }
-.boardOptions {
+.boardOptions-Normal {
     width: 660px;
     height: 420px;
+    background-color: yellow;
 }
 .boardSizes {
     visibility: hidden;
@@ -72,7 +73,6 @@
 .cell {
     width: 80px;
     height: 80px;
-    background-color: black;
     border: 1px solid #ccc;
     display: flex;
     justify-content: center;
@@ -326,6 +326,9 @@ img {
 .style {
     border-radius: 6px;
 }
+.cell-Normal {
+    background-color: black;
+}
 /* Beginning of Different Styles */
 /* Dark Mode */
 .body-Dark {
@@ -365,10 +368,16 @@ img {
 .cell-Dark:hover {
     background-color: #eee;
 }
+.boardOptions-Dark {
+    width: 660px;
+    height: 420px;
+    background-color: grey;
+}
 /* Teal mode */
 .body-Teal {
     font-family: sans-serif;
     background-color: Teal;
+    background-image: linear-gradient(to bottom, #26bf96, teal);
 }
 .game-container-Teal {
     display: flex;
@@ -376,7 +385,6 @@ img {
     align-items: center;
     min-height: 70vh;
     margin: 0;
-    background-color: Teal;
 }
 .reportBtn-Teal {
     background-color: Teal;
@@ -402,10 +410,17 @@ img {
 .cell-Teal:hover {
     background-color: #eee;
 }
+.boardOptions-Teal {
+    width: 660px;
+    height: 420px;
+    background-color: teal;
+    background-image: linear-gradient(to bottom, #2bdfaf, #26bf96);
+}
 /* Orange mode*/
 .body-Orange {
     font-family: sans-serif;
     background-color: #ff6933;
+    background-image: linear-gradient(to bottom, #ff6933, #d3321d);
 }
 .game-container-Orange {
     display: flex;
@@ -414,10 +429,9 @@ img {
     min-height: 70vh;
     margin: 0;
     color: #600080;
-    background-color: #ff6933;
 }
 .reportBtn-Orange {
-    background-color: #ff6933;
+    background-color: #d3321d;
     border: 0;
     outline: none;
     cursor: pointer;
@@ -439,4 +453,9 @@ img {
 }
 .cell-Orange:hover {
     background-color: #eee;
+}
+.boardOptions-Orange {
+    width: 660px;
+    height: 420px;
+    background-color: orange;
 }

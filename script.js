@@ -500,6 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
       for (let col = 0; col < size; col++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
+        cell.classList.add("cell-Normal");
         cell.dataset.row = row;
         cell.dataset.col = col;
         cell.addEventListener("click", handleCellClick);
@@ -629,26 +630,43 @@ document.addEventListener("DOMContentLoaded", () => {
     document
       .getElementById("style")
       .setAttribute("class", "game-container-" + boardStyle.value);
+
     document.getElementById("Normal").removeAttribute("body-Normal");
     document
       .getElementById("Normal")
       .setAttribute("class", "body-" + boardStyle.value);
+
     document
       .getElementById("hamburger-Container")
       .removeAttribute("site-header-Normal");
     document
       .getElementById("hamburger-Container")
       .setAttribute("class", "site-header-" + boardStyle.value);
+
     document
       .getElementById("hamburger_Pic")
       .removeAttribute("hamburger-img-Normal");
     document
       .getElementById("hamburger_Pic")
       .setAttribute("class", "hamburger-img-" + boardStyle.value);
+
     document.getElementById("openWarning").removeAttribute("reportBtn-Normal");
     document
       .getElementById("openWarning")
       .setAttribute("class", "reportBtn-" + boardStyle.value);
+
+    document.getElementById("nav-links").removeAttribute("useless-Normal");
+    document
+      .getElementById("nav-links")
+      .setAttribute("class", "useless-" + boardStyle.value);
+
+    document
+      .getElementById("boardOptions")
+      .removeAttribute("boardOptions-Normal");
+    document
+      .getElementById("boardOptions")
+      .setAttribute("class", "boardOptions-" + boardStyle.value);
+
     const cells = document.getElementsByClassName("cell");
     if (boardStyle.value == "Normal") {
       for (var i = 0; i < cells.length; i++) {
