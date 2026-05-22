@@ -633,13 +633,17 @@ document.addEventListener("DOMContentLoaded", () => {
     document
       .getElementById("Normal")
       .setAttribute("class", "body-" + boardStyle.value);
-    document.getElementById("B").removeAttribute("site-header-Normal");
     document
-      .getElementById("B")
+      .getElementById("hamburger-Container")
+      .removeAttribute("site-header-Normal");
+    document
+      .getElementById("hamburger-Container")
       .setAttribute("class", "site-header-" + boardStyle.value);
-    document.getElementById("A").removeAttribute("hamburger-img-Normal");
     document
-      .getElementById("A")
+      .getElementById("hamburger_Pic")
+      .removeAttribute("hamburger-img-Normal");
+    document
+      .getElementById("hamburger_Pic")
       .setAttribute("class", "hamburger-img-" + boardStyle.value);
     document.getElementById("openWarning").removeAttribute("reportBtn-Normal");
     document

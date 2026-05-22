@@ -82,7 +82,7 @@
 }
 
 @media (max-width: 900px) {
-    #nav-links-Normal {
+    #nav-links {
         display: block;
         font-family: sans-serif;
         position: absolute;
