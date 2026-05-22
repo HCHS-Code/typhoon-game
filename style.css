@@ -1,328 +1,463 @@
-body {
-  font-family: sans-serif;
-  background-color: #f0f0f0;
+.body-Normal {
+    font-family: sans-serif;
+    background-color: white;
 }
-
-.game-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
-  margin: 0;
+#Normal {
+    font-family: sans-serif;
 }
-
-.boardOptions {
-  width: 660px;
-  height: 420px;
-  background-color: rgb(30, 118, 92);
+.game-container-Normal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0;
+    background-color: white;
 }
-.boardSizes{
-  visibility:hidden;
+.boardOptions-Normal {
+    width: 660px;
+    height: 420px;
+    background-color: white;
+}
+.boardSizes {
+    visibility: hidden;
 }
 .boardData {
-  visibility:hidden;
+    visibility: hidden;
 }
 .container {
-  text-align: center;
+    text-align: center;
 }
 
-.titleHolder{
-  flex-direction: row;
-  width: 660px;
+.titleHolder {
+    flex-direction: row;
+    width: 660px;
 }
 
-.popTextOptions{
-  color: rgb(225, 148, 6)
+.popTextOptions {
+    color: rgb(225, 148, 6);
 }
 
 .helpContainer {
-  text-align: center;
-  font-size: 24px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .game-board {
-  display: grid;
-  grid-template-columns: repeat(5, 80px);
-  grid-gap: 5px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap: 5px;
+    margin-top: 20px;
 }
 
 .game-board7x7 {
-  display: grid;
-  grid-template-columns: repeat(7, 80px);
-  grid-gap: 5px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-gap: 5px;
+    margin-top: 20px;
 }
 
 .game-board9x9 {
-  display: grid;
-  grid-template-columns: repeat(9, 80px);
-  grid-gap: 5px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(9, 80px);
+    grid-gap: 5px;
+    margin-top: 20px;
 }
 
 .game-board11x11 {
-  display: grid;
-  grid-template-columns: repeat(11, 80px);
-  grid-gap: 5px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(11, 80px);
+    grid-gap: 5px;
+    margin-top: 20px;
 }
 
-
-
 .cell {
-  width: 80px;
-  height: 80px;
-  background-color: #ddd;
-  border: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  cursor: pointer;
-  user-select: none;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .cell:hover {
-  background-color: #eee;
+    background-color: #eee;
 }
 
 .revealed {
-  background-color: #f9f9f9;
-} 
-
-@keyframes bomb {
-  0% {
-    background-color: #d13b04;
-    font-size: 27px;
-    transform: translate(0, 0) rotate(0deg);
-    color:white;
-    border-radius: 10px;
-    border-color: white;
-    border-width: 2px;
-  }
-  25%{
-    transform: translate(2px, 0px) rotate(2deg);
-    color:black;
-    border-radius: 10px;
-    border-color: black;
-    border-width: 3px;
-  }
-  50% {
-    background-color: rgb(247, 173, 13);
-    font-size: 24px;
-    transform: translate(0, 0) rotate(0eg);
-    color:white;
-    border-radius: 10px;
-    border-color: white;
-    border-width: 2px;
-  }
-  75%{
-    transform: translate(-2px, 0px) rotate(-2deg);
-    color:black;
-    border-radius: 10px;
-    border-color: black;
-    border-width: 3px;
-  }
-  100% {
-    background-color: #f0c906;
-    font-size: 27px;
-    transform: translate(0, 0) rotate(0deg);
-    color:white;
-    border-radius: 10px;
-    border-color: white;
-    border-width: 2px;
-  }
+    background-color: #f9f9f9;
 }
 
- .Bomb{
-  animation-name: bomb;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: normal;
+@keyframes bomb {
+    0% {
+        background-color: #d13b04;
+        font-size: 27px;
+        transform: translate(0, 0) rotate(0deg);
+        color: white;
+        border-radius: 10px;
+        border-color: white;
+        border-width: 2px;
+    }
+    25% {
+        transform: translate(2px, 0px) rotate(2deg);
+        color: black;
+        border-radius: 10px;
+        border-color: black;
+        border-width: 3px;
+    }
+    50% {
+        background-color: rgb(247, 173, 13);
+        font-size: 24px;
+        transform: translate(0, 0) rotate(0eg);
+        color: white;
+        border-radius: 10px;
+        border-color: white;
+        border-width: 2px;
+    }
+    75% {
+        transform: translate(-2px, 0px) rotate(-2deg);
+        color: black;
+        border-radius: 10px;
+        border-color: black;
+        border-width: 3px;
+    }
+    100% {
+        background-color: #f0c906;
+        font-size: 27px;
+        transform: translate(0, 0) rotate(0deg);
+        color: white;
+        border-radius: 10px;
+        border-color: white;
+        border-width: 2px;
+    }
+}
+
+.Bomb {
+    animation-name: bomb;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
 }
 
 @keyframes redCross {
-  0% {
-    background-color: #ddd;
-    
-    font-family: 'Franklin Gothic Medium';
-    width: 80px;
-    height: 80px;
-    background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
-    background-size: 100% 100%;
-  }
-  100% {
-    background-color: #ddd;
-    background-image: url('https://pngmagic.com/product_images/heart-png-hd.png');
-    background-size: 100% 100%;
-    color: white;
-    font-family: 'Franklin Gothic Medium';
-    width: 80.5px;
-    height: 80.5px;
-  }
+    0% {
+        background-color: #ddd;
+
+        font-family: "Franklin Gothic Medium";
+        width: 80px;
+        height: 80px;
+        background-image: url("https://pngmagic.com/product_images/heart-png-hd.png");
+        background-size: 100% 100%;
+    }
+    100% {
+        background-color: #ddd;
+        background-image: url("https://pngmagic.com/product_images/heart-png-hd.png");
+        background-size: 100% 100%;
+        color: white;
+        font-family: "Franklin Gothic Medium";
+        width: 80.5px;
+        height: 80.5px;
+    }
 }
 
- .RedCross{
-  animation-name: redCross;
-  animation-duration: .5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
+.RedCross {
+    animation-name: redCross;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 @keyframes typhoon {
-  0% {
-    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
-    color:black;
-    font-family: 'impact';
-    transform: rotate(-180deg);
-    width: 160px;
-    height: 160px;
-    background-size: auto 100%;
-    font-size: 45px;
-  }
-  50% {
-    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
-    color: grey;
-    font-family: 'impact';
-    transform: rotate(180deg);
-    width: 140px;
-    height: 140px;
-    background-size: auto 100%;
-    font-size: 30px;
-  }
-  100% {
-    background-image: url('https://images.jifo.co/137068591_1664013730100.gif');
-    color: black;
-    font-family: 'impact';
-    transform: rotate(360deg);
-    width: 80px;
-    height: 80px;
-    background-size: auto 100%;
-    font-size: 20px;
-  }
+    0% {
+        background-image: url("https://images.jifo.co/137068591_1664013730100.gif");
+        color: black;
+        font-family: "impact";
+        transform: rotate(-180deg);
+        width: 160px;
+        height: 160px;
+        background-size: auto 100%;
+        font-size: 45px;
+    }
+    50% {
+        background-image: url("https://images.jifo.co/137068591_1664013730100.gif");
+        color: grey;
+        font-family: "impact";
+        transform: rotate(180deg);
+        width: 140px;
+        height: 140px;
+        background-size: auto 100%;
+        font-size: 30px;
+    }
+    100% {
+        background-image: url("https://images.jifo.co/137068591_1664013730100.gif");
+        color: black;
+        font-family: "impact";
+        transform: rotate(360deg);
+        width: 80px;
+        height: 80px;
+        background-size: auto 100%;
+        font-size: 20px;
+    }
 }
 
- .Typhoon{
-  animation-name: typhoon;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-direction:normal;
-  animation-fill-mode: forwards;
-  
+.Typhoon {
+    animation-name: typhoon;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
-@keyframes  poison {
-  0% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact';
-    transform: skewY(-15deg);
-    border-radius: 1px;
-  }
-  5% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact'; 
-    transform: skewY(15deg); 
-    border-radius: 2px;
-  }
-  10% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact'; 
-    transform: skewY(-15deg); 
-    border-radius: 3px;
-  }
-  15% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact';
-     transform: skewY(15deg); 
-      border-radius: 4px;
-  }
-  20% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:black;
-    font-family: 'impact';
-     transform: skewY(0deg); 
-      border-radius: 5px;
-  }
-  100% {
-    background-image: url('https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif');
-    color:whitesmoke;
-    font-family: 'impact';
-     transform: skewY(0deg);
-      border-radius: 7px;
-  }  
+@keyframes poison {
+    0% {
+        background-image: url("https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif");
+        color: black;
+        font-family: "impact";
+        transform: skewY(-15deg);
+        border-radius: 1px;
+    }
+    5% {
+        background-image: url("https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif");
+        color: black;
+        font-family: "impact";
+        transform: skewY(15deg);
+        border-radius: 2px;
+    }
+    10% {
+        background-image: url("https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif");
+        color: black;
+        font-family: "impact";
+        transform: skewY(-15deg);
+        border-radius: 3px;
+    }
+    15% {
+        background-image: url("https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif");
+        color: black;
+        font-family: "impact";
+        transform: skewY(15deg);
+        border-radius: 4px;
+    }
+    20% {
+        background-image: url("https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif");
+        color: black;
+        font-family: "impact";
+        transform: skewY(0deg);
+        border-radius: 5px;
+    }
+    100% {
+        background-image: url("https://img1.picmix.com/output/stamp/normal/2/1/9/3/1953912_1caca.gif");
+        color: whitesmoke;
+        font-family: "impact";
+        transform: skewY(0deg);
+        border-radius: 7px;
+    }
 }
 
-.Poison{
-  animation-name: poison;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
+.Poison {
+    animation-name: poison;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 .bug-report {
-  padding-top:10vh;
+    padding-top: 10vh;
 }
 
-.reportBtn {
-  background-color: #ffffff;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  border-radius: 30px;
-  font-weight: 100;
-  font-size: 2px;
+.reportBtn-Normal {
+    background-color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 2px;
 }
 
-img{
-  width: 40px;
-  height: 40px;
+img {
+    width: 40px;
+    height: 40px;
 }
 
-
-.warning{
-  width: 400px;
-  background: #fff;
-  border-radius: 6px;
-  position: absolute;
-  text-align: center;
-  color: #333;
-  visibility: visible;
-  right: 27px;
-}  
-
-.continueBtn{
-  width: 47%;
-  margin-top: 50px;
-  padding: 10px 0;
-  background: lightskyblue;
-  color: black;
-  border: 0;
-  outline: none;
-  font-size: 18px;
-  border-radius: 4px;
-  cursor: pointer;
+.warning {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    text-align: center;
+    color: #333;
+    visibility: visible;
+    right: 27px;
 }
 
-.cancelBtn{
-  width: 47%;
-  margin-top: 50px;
-  padding: 10px 0;
-  background: lightskyblue;
-  color: black;
-  border: 0;
-  outline: none;
-  font-size: 18px;
-  border-radius: 4px;
-  cursor: pointer;
+.continueBtn {
+    width: 47%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: lightskyblue;
+    color: black;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    width: 47%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: lightskyblue;
+    color: black;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.style {
+    border-radius: 6px;
+}
+.cell-Normal {
+    background-color: #ddd;
+}
+/* Beginning of Different Styles */
+/* Dark Mode */
+.body-Dark {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    background-image: linear-gradient(to bottom, #545452, #000000);
+}
+.game-container-Dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0;
+}
+.reportBtn-Dark {
+    background-color: #600080;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 2px;
+}
+.cell-Dark {
+    width: 80px;
+    height: 80px;
+    background-color: grey;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+.cell-Dark:hover {
+    background-color: #eee;
+}
+.boardOptions-Dark {
+    width: 660px;
+    height: 420px;
+    background-color: grey;
+    background-image: linear-gradient(to bottom, #4d4d4d, #1a1a1a);
+}
+/* Teal mode */
+.body-Teal {
+    font-family: sans-serif;
+    background-color: Teal;
+    background-image: linear-gradient(to bottom, #26bf96, teal);
+}
+.game-container-Teal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0;
+}
+.reportBtn-Teal {
+    background-color: Teal;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 2px;
+}
+.cell-Teal {
+    width: 80px;
+    height: 80px;
+    background-color: #439775;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+.cell-Teal:hover {
+    background-color: #eee;
+}
+.boardOptions-Teal {
+    width: 660px;
+    height: 420px;
+    background-color: teal;
+    background-image: linear-gradient(to bottom, #2bdfaf, #26bf96);
+}
+/* Orange mode*/
+.body-Orange {
+    font-family: sans-serif;
+    background-color: #ff6933;
+    background-image: linear-gradient(to bottom, #ff6933, #d3321d);
+}
+.game-container-Orange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0;
+    color: #600080;
+}
+.reportBtn-Orange {
+    background-color: #d3321d;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 2px;
+}
+.cell-Orange {
+    width: 80px;
+    height: 80px;
+    background-color: #ce5529;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+.cell-Orange:hover {
+    background-color: #eee;
+}
+.boardOptions-Orange {
+    width: 660px;
+    height: 420px;
+    background-color: orange;
+    background-image: linear-gradient(to bottom, #ff9722, #ce653b);
 }
