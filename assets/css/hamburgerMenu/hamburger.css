@@ -99,7 +99,6 @@
     padding-left: 1%;
     min-height: 8vh;
     align-content: center;
-    background-color: Black;
 }
 .hamburger-img-Dark {
     height: 40px;
@@ -108,6 +107,7 @@
 }
 .useless-Dark {
     background-color: #4d4d4d;
+    background-image: linear-gradient(to bottom, #4d4d4d, #1a1a1a);
 }
 .site-header-Teal {
     padding-left: 1%;
@@ -135,4 +135,5 @@
 }
 .useless-Orange {
     background-color: #ff9722;
+    background-image: linear-gradient(to bottom, #ff9722, #ce653b);
 }

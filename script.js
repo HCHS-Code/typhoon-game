@@ -671,7 +671,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (boardStyle.value == "Normal") {
       for (var i = 0; i < cells.length; i++) {
         cells[i].removeAttribute("cell-" + boardStyle.value);
-        cells[i].setAttribute("class", "cell");
+        cells[i].setAttribute("class", "cell-" + boardStyle.value);
       }
     } else if (boardStyle.value == "Dark") {
       for (var j = 0; j < cells.length; j++) {

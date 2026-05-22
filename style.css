@@ -335,6 +335,7 @@ img {
     font-family: sans-serif;
     background-color: black;
     color: white;
+    background-image: linear-gradient(to bottom, #545452, #000000);
 }
 .game-container-Dark {
     display: flex;
@@ -342,7 +343,6 @@ img {
     align-items: center;
     min-height: 70vh;
     margin: 0;
-    background-color: black;
 }
 .reportBtn-Dark {
     background-color: #600080;
@@ -372,6 +372,7 @@ img {
     width: 660px;
     height: 420px;
     background-color: grey;
+    background-image: linear-gradient(to bottom, #4d4d4d, #1a1a1a);
 }
 /* Teal mode */
 .body-Teal {
@@ -458,4 +459,5 @@ img {
     width: 660px;
     height: 420px;
     background-color: orange;
+    background-image: linear-gradient(to bottom, #ff9722, #ce653b);
 }
