@@ -16,7 +16,7 @@
 .boardOptions-Normal {
     width: 660px;
     height: 420px;
-    background-color: yellow;
+    background-color: white;
 }
 .boardSizes {
     visibility: hidden;
@@ -327,7 +327,7 @@ img {
     border-radius: 6px;
 }
 .cell-Normal {
-    background-color: black;
+    background-color: #ddd;
 }
 /* Beginning of Different Styles */
 /* Dark Mode */
@@ -443,7 +443,7 @@ img {
 .cell-Orange {
     width: 80px;
     height: 80px;
-    background-color: #ff6933;
+    background-color: #ce5529;
     border: 1px solid #ccc;
     display: flex;
     justify-content: center;
